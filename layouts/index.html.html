@@ -1,0 +1,9 @@
+{{ define "main" }}
+{{ .Content }}
+{{ range (.Site.GetPage (path.Join "/timeline")).Pages }}
+<div >
+{{ .Content }}
+</div>
+{{ end }}
+
+ {{ end }}
