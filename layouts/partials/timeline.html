@@ -4,11 +4,11 @@
 <div class="timeline">
   {{ range $decades }}
     {{ if (where $quotes.Pages ".Params.Decade" "==" .) }}
-        <h2 class="decade">{{ . }}</h2>
+        <h2>{{ . }}</h2>
         {{ range $i, $val := (where $quotes.Pages ".Params.Decade" "==" .)}}
           {{ $quote := .}}
-              <div class="quote">
-                <div class="quote__content">{{ .Content }}</div>
+              <div>
+                <div>{{ .Content }}</div>
               </div>
         {{ end }}
     {{ end }}
