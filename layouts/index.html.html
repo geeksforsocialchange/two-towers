@@ -1,9 +1,4 @@
 {{ define "main" }}
-{{ .Content }}
-{{ range (.Site.GetPage (path.Join "/timeline")).Pages }}
-<div >
-{{ .Content }}
-</div>
+  {{ .Content }}
+  {{ partial "timeline.html" . }}
 {{ end }}
-
- {{ end }}
