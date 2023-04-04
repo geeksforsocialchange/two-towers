@@ -1,0 +1,16 @@
+{{ $decades := $.Site.Data.timeline.decades }}
+{{ $quotes := $.Site.GetPage (path.Join "/timeline") }}
+
+<div class="timeline">
+  {{ range $decades }}
+    {{ if (where $quotes.Pages ".Params.Decade" "==" .) }}
+        <h2>{{ . }}</h2>
+        {{ range $i, $val := (where $quotes.Pages ".Params.Decade" "==" .)}}
+          {{ $quote := .}}
+              <div>
+                <div>{{ .Content }}</div>
+              </div>
+        {{ end }}
+    {{ end }}
+  {{ end }}
+</div>
