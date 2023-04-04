@@ -3,9 +3,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: var(--s1);
 
   &__quote {
-    max-width: 1000px;
+    max-width: var(--s10);;
   }
 }
