@@ -5,9 +5,10 @@
   {{ range $decades }}
     {{ if (where $quotes.Pages ".Params.Decade" "==" .) }}
         <h2>{{ . }}</h2>
-        {{ range $i, $val := (where $quotes.Pages ".Params.Decade" "==" .)}}
+        {{ range $i, $val := (where ($quotes.Pages.ByParam "Year") ".Params.Decade" "==" .)}}
           {{ $quote := .}}
-              <div>
+              <div class="timeline__quote">
+                <p>{{ $quote.Param "Year" }}</p>
                 <div>{{ .Content }}</div>
               </div>
         {{ end }}
