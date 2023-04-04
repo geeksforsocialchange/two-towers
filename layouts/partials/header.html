@@ -1,10 +1,7 @@
 <section class="header">
 	<h1>{{.Site.Title}}</h1>
 	<h2>{{.Params.subtitle}}</h2>
-	<div class="header__content">
-		<div class="header__text" >
-			{{ .Content }}
-		</div>
-		{{ partial "timeline-navigation.html" . }}
+	<div class="header__text" >
+		{{ .Content }}
 	</div>
 </section>
