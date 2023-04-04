@@ -1,4 +1,5 @@
 # two-towers
+
 The Project Formally Known As RAFTT
 
 # Development
@@ -24,7 +25,7 @@ You would then visit (example IP) [192.168.10.10:1313](http://192.168.10.10:1313
 ## adding a new item to the timeline
 
 ```sh
-#                                        /name 
+#                                        /name
 hugo new --kind timeline-bundle timeline/quote1
 ```
 
@@ -37,7 +38,6 @@ quote1
 ├── image.jpg
 └── index.md
 ```
-
 
 ## Build
 
@@ -57,9 +57,12 @@ When a pull request is created, a preview site is deployed. Cloudflares github a
 
 If the build is successful and the changes are approved it can be merged into `main` which will automatically deploy it.
 
+## Add new dates to the timeline
+
+The list of decades used as markers on the timeline are defined in the timeline file in the data folder. If you want to add a new date marker to the timeline you can add a date into this chronologically ordered list.
+
 ## License
 
 ## Contributing
 
 ## Donations
-
