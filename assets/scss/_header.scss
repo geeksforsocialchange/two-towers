@@ -6,15 +6,22 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
+  
+  &__content {
+    display: flex;
+    flex-direction: row;
+  }
 
-.header__title {
-}
-.header__subtitle {
-}
-.header__text {
-  box-sizing: content-box;
-  max-width: 65ch;
-  background-color: var(--color-transparent-white);
-  padding: var(--s2);
+  &__text {
+    box-sizing: content-box;
+    max-width: 65ch;
+    background-color: var(--color-transparent-white);
+    padding: var(--s2);
+  }
+
+  &__title {
+  }
+
+  &__subtitle {
+  }
 }
