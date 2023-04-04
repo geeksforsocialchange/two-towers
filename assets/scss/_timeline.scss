@@ -15,4 +15,9 @@
   position: fixed;
   top: 0;
   right: 0;
+
+  &__list{
+    display: flex;
+    flex-direction: column;
+  }
 }

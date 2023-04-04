@@ -1,14 +1,14 @@
 {{ $decades := $.Site.Data.timeline.decades }}
 {{ $quotes := $.Site.GetPage (path.Join "/timeline") }}
 
-<div class="timeline-navigation">
-  {{ range $decades }}
-    {{ if (where $quotes.Pages ".Params.Decade" "==" .) }}
-      {{ $decade := .}}
-      {{ $href := (printf "%s%s" "#" (string $decade))}}
-      <a href={{ $href }}>
-        <h2>{{ $decade }}</h2>
-      </a>
+<nav class="timeline-navigation">
+  <ul class="timeline-navigation__list">
+    {{ range $decades }}
+      {{ if (where $quotes.Pages ".Params.Decade" "==" .) }}
+        {{ $decade := .}}
+        {{ $href := (printf "%s%s" "#" (string $decade))}}
+        <a href={{ $href }}>{{ $decade }}</a>
+      {{ end }}
     {{ end }}
-  {{ end }}
-</div>
+  </ul>
+</nav>
