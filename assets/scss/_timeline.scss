@@ -9,3 +9,15 @@
     max-width: var(--s10);;
   }
 }
+
+.timeline-navigation {
+  margin: var(--s2);
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  &__list{
+    display: flex;
+    flex-direction: column;
+  }
+}
