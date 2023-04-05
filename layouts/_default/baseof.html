@@ -18,7 +18,8 @@
     <main>
       {{partial "header.html" .}}
       {{- block "main" . }}{{- end }}
-    </main>
-    <script type="text/javascript" src="/assets/js/lightbox.js"></script>
+    </main> 
+    {{ $lightbox := resources.Get "js/lightbox.js" | minify | resources.Fingerprint "sha256" }}
+    <script type="text/javascript" src="{{ $lightbox.RelPermalink }}"></script>
   </body>
 </html>
