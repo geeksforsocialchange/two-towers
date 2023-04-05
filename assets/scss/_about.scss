@@ -1,0 +1,15 @@
+.about-background {
+  background-image: url("/about.jpg");
+  background-size: cover;
+  background-position-x: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-container {
+  box-sizing: content-box;
+  max-width: 1000px;
+  background-color: var(--color-transparent-white);
+  padding: var(--s2);
+}
