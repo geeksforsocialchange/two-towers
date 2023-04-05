@@ -1,5 +1,4 @@
 ---
-<<<<<<< HEAD:content/timeline/labour_in_power/index.md
 title: Labour gain power # My lovely content
 decade: 1990 # 1970
 category: uk_news # global_news, uk_news, oldham_news, oldham_history, towers, surrounding_estate # Always exactly one category
