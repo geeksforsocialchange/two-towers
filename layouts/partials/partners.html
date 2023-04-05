@@ -1,0 +1,10 @@
+{{ $partners := $.Site.GetPage (path.Join "/partners") }}
+
+
+<h2>This project was produced in partnership with:</h2>
+
+<ul class="partners" role="list">
+	{{ range $partners.Pages }}
+	<li class="partners__partner"><a href="{{ .Params.link }}">{{ .Params.name }}</a></li>	
+	{{ end }}
+</ul>
