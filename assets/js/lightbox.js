@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     //show the lightbox on click
-    const elements = document.querySelectorAll('img.lightbox-image');
+    const elements = document.querySelectorAll('img.lightbox-image__image');
     const lightbox = document.querySelectorAll('div.lightbox')[0];
     elements.forEach(element => {
         element.addEventListener("click", function(event) {

@@ -1,5 +1,18 @@
 .lightbox-image {
-    cursor: pointer; 
+    cursor: pointer;
+    position: relative;
+    &__magnifying-glass{
+        bottom: var(--s0);
+        height: var(--s3);
+        position: absolute;
+        right: var(--s0);
+        width: var(--s3);
+        z-index: 100;
+
+    } 
+    &__image{
+        position: inherit;
+    }
 }
 
 .lightbox {
