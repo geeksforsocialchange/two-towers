@@ -1,0 +1,12 @@
+.partners {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(10em, 33%, 17rem), 1fr));
+  gap: var(--s2);
+}
+
+.partners__partner {
+  aspect-ratio: 313 / 230;
+  background-color: pink;
+}

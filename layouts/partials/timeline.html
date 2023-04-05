@@ -10,7 +10,7 @@
         </a>
         {{ range $i, $val := (where ($quotes.Pages.ByParam "Year") ".Params.Decade" "==" $decade)}}
           {{ $quote := .}}
-              <div class="timeline__quote">
+              <div class="timeline__quote content">
                 <p>{{ $quote.Params.year }}</p>
                 {{ if $quote.Params.Image_path }}
                   <img 
