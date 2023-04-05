@@ -1,13 +1,12 @@
 {{ $decades := $.Site.Data.timeline.decades }}
 {{ $quotes := $.Site.GetPage (path.Join "/timeline") }}
 
-<div class="timeline">
+<div class="timeline ">
   {{ range $decades }}
     {{ if (where $quotes.Pages ".Params.Decade" "==" .) }}
       {{ $decade := .}}
-        <a id={{ string $decade }}>
-          <h2>{{ $decade }}</h2>
-        </a>
+			<div class="timeline__line">
+          <h2 id={{ string $decade }} class="timeline__decade">{{ $decade }}</h2>
         {{ range $i, $val := (where ($quotes.Pages.ByParam "Year") ".Params.Decade" "==" $decade)}}
           {{ $quote := .}}
               <div class="timeline__quote content">
@@ -18,6 +17,7 @@
                 <div>{{ .Content }}</div>
               </div>
         {{ end }}
+			</div>
     {{ end }}
   {{ end }}
 </div>
