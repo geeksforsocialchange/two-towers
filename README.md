@@ -39,6 +39,23 @@ quote1
 └── index.md
 ```
 
+## adding a new partners to the about page
+
+```sh
+#                                        /name
+hugo new --kind partners-bundle partners/partner1
+```
+
+Then edit the relevant info in `content/partners/partner1/index.md`
+
+Partner images should be collocated with `index.md`
+
+```
+partner1
+├── image.jpg
+└── index.md
+```
+
 ## Build
 
 `hugo` command to build. This will create a directory called `public` which contains the website.

@@ -1,0 +1,10 @@
+{{ define "main" }}
+	<div class="about-background">
+		<h1>{{.Site.Title}}</h1>
+		<h2>{{.Params.subtitle}}</h2>
+		<div class="about-container">
+		  {{ .Content }}
+			{{ partial "partners.html" . }}
+		</div>
+	</div>
+{{ end }}
