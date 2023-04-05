@@ -10,4 +10,4 @@ image_caption: # If there is one
 image_path: test-image.png
 ---
 
-[cCc] This is just an example we will delete it very soon
+[cCc] This is just an example we really will delete it very soon
