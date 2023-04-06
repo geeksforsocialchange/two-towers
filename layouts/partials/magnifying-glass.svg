@@ -1,0 +1,12 @@
+<svg 
+  width="129" 
+  height="129" 
+  viewBox="0 0 129 129" 
+  fill="none" 
+  xmlns="http://www.w3.org/2000/svg"
+  class="timeline-image__magnifying-glass"
+  >
+  <circle cx="64.9688" cy="64.1406" r="64" fill="var(--color-white)"></circle>
+  <circle cx="55.0732" cy="57.0239" r="20" stroke="var(--color-brown)" stroke-width="8"></circle>
+  <line x1="96.037" y1="98.087" x2="70.6337" y2="72.7054" stroke="var(--color-brown)" stroke-width="8"></line>
+</svg>

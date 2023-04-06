@@ -1,14 +1,12 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   //hide the lightbox
-  document
-    .querySelectorAll("div.lightbox")[0]
-    .addEventListener("click", function (event) {
-      this.innerHTML = "";
-      document.querySelectorAll("div.lightbox")[0].style.display = "none";
-    });
+  document.querySelectorAll("div.lightbox")[0].addEventListener("click", () => {
+    this.innerHTML = "";
+    document.querySelectorAll("div.lightbox")[0].style.display = "none";
+  });
 
   //show the lightbox on click
-  const elements = document.querySelectorAll("img.lightbox-image");
+  const elements = document.querySelectorAll("img.timeline-image__image");
   const lightbox = document.querySelectorAll("div.lightbox")[0];
   elements.forEach((element) => {
     element.addEventListener("click", function (event) {
