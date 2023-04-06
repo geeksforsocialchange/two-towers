@@ -1,22 +1,22 @@
 .lightbox {
-    width: 100%; 
+    background: rgba(0,0,0,0.85); 
+    display: none;
     height: 100%; 
+    left: 0; 
+    line-height: 0; 
+    padding: var(--s3);
     position: fixed; 
     top: 0; 
-    left: 0; 
-    background: rgba(0,0,0,0.85); 
+    width: 100%; 
     z-index: 9999999; 
-    line-height: 0; 
-    display: none;
 
     &__image{
-        position: relative; 
-        top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
         max-width: 100%;
-        max-height: 100%;
-        margin-top: var(--s3);
+        max-height: 100%; 
+        position: relative;
+        top: 50%;
+        transform: translate(-50%,-50%);
     }
 
     &__hidden-image{
@@ -26,39 +26,42 @@
     }
 
     &__title{
-        display: block; 
-        position: fixed; 
-        top: var(--s0); 
-        width: 100%; 
-        text-align: center; 
         color: white; 
+        display: block; 
+        left: 0; 
+        position: fixed;
+        right:0;
+        text-align: center; 
         text-shadow:
             -1px -1px 0 #000,
             1px -1px 0 #000,
             -1px 1px 0 #000,
-            1px 1px 0 #000;     
-        user-select: none;
+            1px 1px 0 #000;
+        top: var(--s0);
+        user-select: none; 
+        width: 100%; 
+        
     }
 
     &__close{
-        height: 50px; 
-        width: 50px; 
-        position: fixed; 
         cursor: pointer; 
-        text-decoration: none; 
-        z-index: 99; 
+        height: 50px; 
+        position: fixed; 
         right: 0; 
+        text-decoration: none; 
         top: 0;
+        width: 50px; 
+        z-index: 99; 
 
         &::after, &::before{
-            position: absolute; 
-            margin-top: 22px; 
-            margin-left: 14px; 
+            background: white; 
             content: ""; 
             height: 3px; 
-            background: white; 
-            width: 23px;
+            position: absolute; 
+            margin-left: 14px;
+            margin-top: 22px;
             transform-origin: 50% 50%;
+            width: 23px;
         }
         &::before{
             transform: rotate(-45deg);
