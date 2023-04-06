@@ -3,10 +3,24 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: var(--s1);
 
   &__quote {
-    max-width: var(--s10);;
+    max-width: var(--s10);
+    background-color: var(--color-transparent-white);
+  }
+
+  &__line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--s1);
+    background-image: url("/timeline_dash.svg");
+    background-repeat: repeat-y;
+    background-position-x: center;
+  }
+
+  &__decade {
+    display: inline-block;
   }
 }
 
@@ -16,8 +30,39 @@
   top: 0;
   right: 0;
 
-  &__list{
+  &__list {
     display: flex;
     flex-direction: column;
+  }
+}
+
+.timeline-image {
+  cursor: pointer;
+  position: relative;
+  margin: var(--s1);
+  
+  &__magnifying-glass{
+      bottom: var(--s1);
+      height: var(--s3);
+      position: absolute;
+      right: var(--s1);
+      width: var(--s3);
+      z-index: 100;
+  } 
+  &__image{
+      position: inherit;
+      mask-image: url(/cloud-clip.svg);
+      -webkit-mask-image: url(/cloud-clip.svg);
+      mask-size: contain;
+      -webkit-mask-size: contain;
+      mask-repeat: no-repeat;
+      -webkit-mask-repeat: no-repeat;
+      mask-position: center;
+      -webkit-position: center;
+  }
+  //  constrains cloud mask proportions
+  &__container{
+      height: 282px;
+      width: 482px;
   }
 }

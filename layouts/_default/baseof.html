@@ -27,6 +27,7 @@
   <body>
     <main>
       {{- block "main" . }}{{- end }}
+      {{partial "footer.html" .}}
     </main> 
     {{ $lightbox := resources.Get "js/lightbox.js" | minify | resources.Fingerprint "sha256" }}
     <script type="text/javascript" src="{{ $lightbox.RelPermalink }}"></script>

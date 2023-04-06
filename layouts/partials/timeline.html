@@ -2,32 +2,32 @@
 {{ $quotes := $.Site.GetPage (path.Join "/timeline") }}
 {{ $magnifyingGlass := resources.Get "img/magnifyingGlass.svg"}}
 
-<div class="timeline">
+<div class="timeline ">
   {{ range $decades }}
     {{ if (where $quotes.Pages ".Params.Decade" "==" .) }}
       {{ $decade := .}}
-      <a id={{ string $decade }}>
-        <h2>{{ $decade }}</h2>
-      </a>
-      {{ range $i, $val := (where ($quotes.Pages.ByParam "Year") ".Params.Decade" "==" $decade)}}
-        {{ $quote := .}}
-        <div class="timeline__quote content">
-          <p>{{ $quote.Params.year }}</p>
-          {{ if $quote.Params.Image_path }}
-            <div class="lightbox-image">
-              {{ partial "magnifying-glass.svg" }}
-              <img 
-                class="lightbox-image__image" 
-                src={{ path.Join .RelPermalink $quote.Params.Image_path }} 
-                alt={{ $quote.Params.image_alt }} 
-                title={{ strings.TrimSuffix (path.Ext $quote.Params.image_alt) $quote.Params.image_alt}}
-              ></img>
-            </div>
-          {{ end }}
-          <div>{{ .Content }}</div>
-        </div>
-      {{ end }}
+			<div class="timeline__line">
+        <a id={{ string $decade }}><h2 class="timeline__decade">{{ $decade }}</h2></a>
+        {{ range $i, $val := (where ($quotes.Pages.ByParam "Year") ".Params.Decade" "==" $decade)}}
+          {{ $quote := .}}
+          <div class="timeline__quote content">
+            <p>{{ $quote.Params.year }}</p>
+            {{ if $quote.Params.Image_path }}
+              <div class="timeline-image timeline-image__container">
+                {{ partial "magnifying-glass.svg" }}
+                <img 
+                  class="timeline-image__image" 
+                  src={{ path.Join .RelPermalink $quote.Params.Image_path }} 
+                  alt={{ $quote.Params.image_alt }} 
+                  title={{ strings.TrimSuffix (path.Ext $quote.Params.image_alt) $quote.Params.image_alt}}
+                ></img>
+              </div>
+            {{ end }}
+            <div>{{ .Content }}</div>
+          </div>
+        {{ end }}
+      </div>
     {{ end }}
   {{ end }}
+  <div class="lightbox"></div>
 </div>
-<div class="lightbox"></div>
