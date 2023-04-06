@@ -16,9 +16,15 @@
     background-size: 60%;
     &--top {
       background-image: url("/tower-end.png");
+      background-position-x: center;
+      background-repeat: no-repeat;
+      background-size: 60%;
     }
     &--bottom {
       background-image: url("/tower-end.png");
+      background-position-x: center;
+      background-repeat: no-repeat;
+      background-size: 60%;
     }
   }
 

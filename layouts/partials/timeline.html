@@ -5,7 +5,17 @@
   {{ range $decades }}
     {{ if (where $quotes.Pages ".Params.Decade" "==" .) }}
       {{ $decade := .}}
-			<div class="timeline__tower">
+			{{$towerClass := ""}}
+			{{ if eq (int $decade ) 1970}}
+				{{$towerClass = "timeline__tower--top"}}
+			{{ end }}
+			{{ if gt (int $decade ) 1970}}
+				{{$towerClass = "timeline__tower"}}
+			{{ end }}
+			{{ if eq (int $decade ) 2020}}
+				{{$towerClass = "timeline__tower--bottom"}}
+			{{ end }}
+			<div class="{{$towerClass}}">
 				<div class="timeline__line">
 					<div class="timeline__decade">
 							<h2 id={{ string $decade }} class="timeline__decade__title">{{ $decade }}</h2>
