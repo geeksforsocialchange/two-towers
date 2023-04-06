@@ -6,7 +6,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
+  margin-bottom: var(--s5);
+
   &__text {
     box-sizing: content-box;
     max-width: 65ch;

@@ -1,19 +1,23 @@
 {{ $decades := $.Site.Data.timeline.decades }}
 {{ $quotes := $.Site.GetPage (path.Join "/timeline") }}
 
-<div class="timeline">
+<div class="timeline ">
   {{ range $decades }}
     {{ if (where $quotes.Pages ".Params.Decade" "==" .) }}
       {{ $decade := .}}
-        <a id={{ string $decade }}>
-          <h2>{{ $decade }}</h2>
-        </a>
+			<div class="timeline__line">
+          <h2 id={{ string $decade }} class="timeline__decade">{{ $decade }}</h2>
         {{ range $i, $val := (where ($quotes.Pages.ByParam "Year") ".Params.Decade" "==" $decade)}}
           {{ $quote := .}}
               <div class="timeline__quote content">
                 <p>{{ $quote.Params.year }}</p>
                 {{ if $quote.Params.Image_path }}
-                  <img class="timeline__image" src={{ path.Join .RelPermalink $quote.Params.Image_path }} alt={{ $quote.Params.image_alt }}></img>
+                  <img 
+                    class="lightbox-image timeline__image" 
+                    src={{ path.Join .RelPermalink $quote.Params.Image_path }} 
+                    alt={{ $quote.Params.image_alt }} 
+                    title={{ strings.TrimSuffix (path.Ext $quote.Params.image_alt) $quote.Params.image_alt}}
+                  ></img>
                 {{ end }}
                 <div>{{ .Content }}</div>
               </div>
