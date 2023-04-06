@@ -1,6 +1,7 @@
 ---
-name: "[cCc]	Geeks For Social Change"	 # name of org to display to user
-link: "#"# https://wikipedia.org/dsdsadsa # If we have it
+name: "[cCc] National Lottery Heritage Fund"	 # name of org to display to user
+link: https://www.heritagefund.org.uk/ # If we have it
+slug: lottery
 image_alt: # If there is one
-image_path: # If there is one, should be colocated with the index.md file in the folder
+image_path: /partners/lottery.jpeg # If there is one, should be colocated with the index.md file in the folder
 ---
