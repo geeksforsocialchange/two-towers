@@ -13,7 +13,7 @@
                 <p>{{ $quote.Params.year }}</p>
                 {{ if $quote.Params.Image_path }}
                   <img 
-                    class="lightbox-image" 
+                    class="lightbox-image timeline__image" 
                     src={{ path.Join .RelPermalink $quote.Params.Image_path }} 
                     alt={{ $quote.Params.image_alt }} 
                     title={{ strings.TrimSuffix (path.Ext $quote.Params.image_alt) $quote.Params.image_alt}}
@@ -22,8 +22,6 @@
                 <div>{{ .Content }}</div>
               </div>
         {{ end }}
-			</div>
     {{ end }}
   {{ end }}
 </div>
-<div class="lightbox"></div>

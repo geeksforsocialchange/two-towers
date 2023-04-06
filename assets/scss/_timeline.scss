@@ -22,6 +22,17 @@
   &__decade {
     display: inline-block;
   }
+
+  &__image {
+      mask-image: url(/cloud-clip.svg);
+      -webkit-mask-image: url(/cloud-clip.svg);
+      mask-size: contain;
+      -webkit-mask-size: contain;
+      mask-repeat: no-repeat;
+      -webkit-mask-repeat: no-repeat;
+      mask-position: center;
+      -webkit-position: center;
+  }
 }
 
 .timeline-navigation {
