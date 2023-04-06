@@ -15,15 +15,15 @@
     background-position-x: center;
     background-size: 60%;
     &--top {
-      background-image: url("/tower-end.png");
+      background-image: url("/tower-top.png"), url("/tower-middle.png");
+      background-repeat: no-repeat, repeat-y;
       background-position-x: center;
-      background-repeat: no-repeat;
       background-size: 60%;
     }
     &--bottom {
-      background-image: url("/tower-end.png");
-      background-position-x: center;
-      background-repeat: no-repeat;
+      background-image: url("/tower-bottom.png"), url("/tower-middle.png");
+      background-repeat: no-repeat, repeat-y;
+      background-position: center bottom, center top;
       background-size: 60%;
     }
   }
