@@ -62,7 +62,7 @@
   }
   //  constrains cloud mask proportions
   &__container{
-      height: 282px;
-      width: 482px;
+      height: $timeline-image-height;
+      width: $timeline-image-width;
   }
 }

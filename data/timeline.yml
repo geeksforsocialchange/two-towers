@@ -13,3 +13,6 @@ decades:
   - 2010
   - 2020
   - 2030
+imageSize:
+  height: 282px
+  width: 482px

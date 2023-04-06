@@ -1,4 +1,5 @@
 {{ $decades := $.Site.Data.timeline.decades }}
+{{ $imageWidth := printf "%s%s" (strings.TrimSuffix "px" (string $.Site.Data.timeline.imageSize.width)) "x" }}
 {{ $quotes := $.Site.GetPage (path.Join "/timeline") }}
 
 <div class="timeline ">
@@ -13,7 +14,7 @@
           <p>{{ $quote.Params.year }}</p>
           {{ with .Resources.GetMatch $quote.Params.Image_path }}
             {{ $originalImagePath := . }}
-            {{ with .Resize "482x" }}
+            {{ with .Resize $imageWidth }}
               <div class="timeline-image timeline-image__container">
                 {{ partial "magnifying-glass.svg" }}
                 <img 
