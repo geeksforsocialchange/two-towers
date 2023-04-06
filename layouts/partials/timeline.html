@@ -9,25 +9,25 @@
 			<div class="timeline__line">
         <a id={{ string $decade }}><h2 class="timeline__decade">{{ $decade }}</h2></a>
         {{ range $i, $val := (where ($quotes.Pages.ByParam "Year") ".Params.Decade" "==" $decade)}}
-        {{ $quote := .}}
-        <div class="timeline__quote content">
-          <p>{{ $quote.Params.year }}</p>
-          {{ with .Resources.GetMatch $quote.Params.Image_path }}
-            {{ $originalImagePath := . }}
-            {{ with .Resize $imageWidth }}
-              <div class="timeline-image timeline-image__container">
-                {{ partial "magnifying-glass.svg" }}
-                <img 
-                  class="timeline-image__image" 
-                  src={{ .RelPermalink }} 
-                  alt={{ $quote.Params.image_alt }} 
-                  title={{ $originalImagePath }}
-                ></img>
-              </div>
+          {{ $quote := .}}
+          <div class="timeline__quote content">
+            <p>{{ $quote.Params.year }}</p>
+            {{ with .Resources.GetMatch $quote.Params.Image_path }}
+              {{ $originalImagePath := . }}
+              {{ with .Resize $imageWidth }}
+                <div class="timeline-image timeline-image__container">
+                  {{ partial "magnifying-glass.svg" }}
+                  <img 
+                    class="timeline-image__image" 
+                    src={{ .RelPermalink }} 
+                    alt={{ $quote.Params.image_alt }} 
+                    title={{ $originalImagePath }}
+                  ></img>
+                </div>
+              {{ end }}
             {{ end }}
-          {{ end }}
-          <div>{{ .Content }}</div>
-        </div>
+            <div>{{ .Content }}</div>
+          </div>
         {{ end }}
       </div>
     {{ end }}
