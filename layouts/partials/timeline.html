@@ -13,7 +13,7 @@
               <div class="timeline__quote content">
                 <p>{{ $quote.Params.year }}</p>
                 {{ if $quote.Params.Image_path }}
-                  <img src={{ path.Join .RelPermalink $quote.Params.Image_path }} alt={{ $quote.Params.image_alt }}></img>
+                  <img class="timeline__image" src={{ path.Join .RelPermalink $quote.Params.Image_path }} alt={{ $quote.Params.image_alt }}></img>
                 {{ end }}
                 <div>{{ .Content }}</div>
               </div>
