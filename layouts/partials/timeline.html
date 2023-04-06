@@ -12,14 +12,17 @@
           {{ $quote := .}}
               <div class="timeline__quote content">
                 <p>{{ $quote.Params.year }}</p>
-                {{ if $quote.Params.Image_path }}
-                  <img 
-                    class="lightbox-image" 
-                    src={{ path.Join .RelPermalink $quote.Params.Image_path }} 
-                    alt={{ $quote.Params.image_alt }} 
-                    title={{ strings.TrimSuffix (path.Ext $quote.Params.image_alt) $quote.Params.image_alt}}
-                  ></img>
-                {{ end }}
+                  {{ with .Resources.GetMatch $quote.Params.Image_path }}
+                    {{ $originalImagePath := . }}
+                    {{ with .Resize "482x" }}
+                      <img 
+                        class="lightbox-image" 
+                        src={{ .RelPermalink }} 
+                        alt={{ $quote.Params.image_alt }} 
+                        title={{ $originalImagePath }}
+                      ></img>
+                    {{ end }}
+                  {{ end }}
                 <div>{{ .Content }}</div>
               </div>
         {{ end }}
