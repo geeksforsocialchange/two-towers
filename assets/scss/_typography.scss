@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Clarendon;
+    src: url(/clarendon.ttf) format(truetype);
+}
+
 * {
   font-family: Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans",
     source-sans-pro, sans-serif;
@@ -8,5 +13,5 @@
 }
 
 .content * {
-    font-family: Tiro Telugu, serif;
+    font-family: Clarendon, serif;
 }
