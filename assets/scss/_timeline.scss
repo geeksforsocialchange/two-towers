@@ -10,20 +10,32 @@
   }
 
   &__tower {
-    background-image: url("/tower-middle.png");
+    background-image: linear-gradient(
+        var(--color-transparent-white),
+        var(--color-transparent-white)
+      ),
+      url("/tower-middle.png");
     background-repeat: repeat-y;
     background-position-x: center;
     background-size: 60%;
     &--top {
-      background-image: url("/tower-top.png"), url("/tower-middle.png");
-      background-repeat: no-repeat, repeat-y;
+      background-image: linear-gradient(
+          var(--color-transparent-white),
+          var(--color-transparent-white)
+        ),
+        url("/tower-top.png"), url("/tower-middle.png");
+      background-repeat: repeat-y, no-repeat, repeat-y;
       background-position-x: center;
       background-size: 60%;
     }
     &--bottom {
-      background-image: url("/tower-bottom.png"), url("/tower-middle.png");
-      background-repeat: no-repeat, repeat-y;
-      background-position: center bottom, center top;
+      background-image: linear-gradient(
+          var(--color-transparent-white),
+          var(--color-transparent-white)
+        ),
+        url("/tower-bottom.png"), url("/tower-middle.png");
+      background-repeat: repeat-y, no-repeat, repeat-y;
+      background-position: center, center bottom, center;
       background-size: 60%;
     }
   }
