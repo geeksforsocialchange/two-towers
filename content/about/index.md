@@ -2,43 +2,6 @@
 subtitle:  'A history of Summervale and Crossbank'
 ---
 
-[cCc] This is the about page 
+[cCc] *The Towers: A history of Summervale and Crossbank* is a digital community project designed to create a digital archive of the West Street Area in Coldhurst, Oldham during the time Summervale House and Crossbank House stood (1975 - 2022). 
 
-AIn 2009, Tim Berners-Lee took the stage at the TED conference in Long Beach, California, and led the audience to repeatedly chant the words “[Raw Data Now!](https://youtu.be/OM6XIICm_qo?t=630)” \[...] Demanding “raw data” is an oversimplification that imagines the alignment of different practices to a shared vocabulary as something trivial.
-
-nother problem, manifest in the strangely petulant tone of his plea, is the presumption that all the data of the world should be released, with no discussion of why or for whose benefit, no consideration of past examples of commodification of materials generated with care by communities, and no consideration of the implications for reuse.
-
-AIn 2009, Tim Berners-Lee took the stage at the TED conference in Long Beach, California, and led the audience to repeatedly chant the words “[Raw Data Now!](https://youtu.be/OM6XIICm_qo?t=630)” \[...] Demanding “raw data” is an oversimplification that imagines the alignment of different practices to a shared vocabulary as something trivial.
-
-nother problem, manifest in the strangely petulant tone of his plea, is the presumption that all the data of the world should be released, with no discussion of why or for whose benefit, no consideration of past examples of commodification of materials generated with care by communities, and no consideration of the implications for reuse.
-
-[cCc] This is the about page 
-
-AIn 2009, Tim Berners-Lee took the stage at the TED conference in Long Beach, California, and led the audience to repeatedly chant the words “[Raw Data Now!](https://youtu.be/OM6XIICm_qo?t=630)” \[...] Demanding “raw data” is an oversimplification that imagines the alignment of different practices to a shared vocabulary as something trivial.
-
-nother problem, manifest in the strangely petulant tone of his plea, is the presumption that all the data of the world should be released, with no discussion of why or for whose benefit, no consideration of past examples of commodification of materials generated with care by communities, and no consideration of the implications for reuse.
-
-AIn 2009, Tim Berners-Lee took the stage at the TED conference in Long Beach, California, and led the audience to repeatedly chant the words “[Raw Data Now!](https://youtu.be/OM6XIICm_qo?t=630)” \[...] Demanding “raw data” is an oversimplification that imagines the alignment of different practices to a shared vocabulary as something trivial.
-
-nother problem, manifest in the strangely petulant tone of his plea, is the presumption that all the data of the world should be released, with no discussion of why or for whose benefit, no consideration of past examples of commodification of materials generated with care by communities, and no consideration of the implications for reuse.
-
-[cCc] This is the about page 
-
-AIn 2009, Tim Berners-Lee took the stage at the TED conference in Long Beach, California, and led the audience to repeatedly chant the words “[Raw Data Now!](https://youtu.be/OM6XIICm_qo?t=630)” \[...] Demanding “raw data” is an oversimplification that imagines the alignment of different practices to a shared vocabulary as something trivial.
-
-nother problem, manifest in the strangely petulant tone of his plea, is the presumption that all the data of the world should be released, with no discussion of why or for whose benefit, no consideration of past examples of commodification of materials generated with care by communities, and no consideration of the implications for reuse.
-
-AIn 2009, Tim Berners-Lee took the stage at the TED conference in Long Beach, California, and led the audience to repeatedly chant the words “[Raw Data Now!](https://youtu.be/OM6XIICm_qo?t=630)” \[...] Demanding “raw data” is an oversimplification that imagines the alignment of different practices to a shared vocabulary as something trivial.
-
-nother problem, manifest in the strangely petulant tone of his plea, is the presumption that all the data of the world should be released, with no discussion of why or for whose benefit, no consideration of past examples of commodification of materials generated with care by communities, and no consideration of the implications for reuse.
-
-[cCc] This is the about page 
-
-AIn 2009, Tim Berners-Lee took the stage at the TED conference in Long Beach, California, and led the audience to repeatedly chant the words “[Raw Data Now!](https://youtu.be/OM6XIICm_qo?t=630)” \[...] Demanding “raw data” is an oversimplification that imagines the alignment of different practices to a shared vocabulary as something trivial.
-
-nother problem, manifest in the strangely petulant tone of his plea, is the presumption that all the data of the world should be released, with no discussion of why or for whose benefit, no consideration of past examples of commodification of materials generated with care by communities, and no consideration of the implications for reuse.
-
-AIn 2009, Tim Berners-Lee took the stage at the TED conference in Long Beach, California, and led the audience to repeatedly chant the words “[Raw Data Now!](https://youtu.be/OM6XIICm_qo?t=630)” \[...] Demanding “raw data” is an oversimplification that imagines the alignment of different practices to a shared vocabulary as something trivial.
-
-nother problem, manifest in the strangely petulant tone of his plea, is the presumption that all the data of the world should be released, with no discussion of why or for whose benefit, no consideration of past examples of commodification of materials generated with care by communities, and no consideration of the implications for reuse.
-
+This site hosts a timeline of personal stories, news, and archival images, to allow you to explore this part of Oldham's history, as told by residents, neighbours, and those who passed through. It's arranged chronologically, to show the changing area through time, and follows the stories of those living in and around the towers. 
