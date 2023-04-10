@@ -45,17 +45,6 @@
       display: inline-block;
     }
   }
-
-  &__image {
-    mask-image: url(/cloud-clip.svg);
-    -webkit-mask-image: url(/cloud-clip.svg);
-    mask-size: contain;
-    -webkit-mask-size: contain;
-    mask-repeat: no-repeat;
-    -webkit-mask-repeat: no-repeat;
-    mask-position: center;
-    -webkit-position: center;
-  }
 }
 
 .timeline-navigation {
@@ -67,5 +56,36 @@
   &__list {
     display: flex;
     flex-direction: column;
+  }
+}
+
+.timeline-image {
+  cursor: pointer;
+  position: relative;
+  margin: var(--s1);
+
+  &__magnifying-glass {
+    bottom: var(--s1);
+    height: var(--s3);
+    position: absolute;
+    right: var(--s1);
+    width: var(--s3);
+    z-index: 100;
+  }
+  &__image {
+    position: inherit;
+    mask-image: url(/cloud-clip.svg);
+    -webkit-mask-image: url(/cloud-clip.svg);
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-position: center;
+  }
+  //  constrains cloud mask proportions
+  &__container {
+    height: 282px;
+    width: 482px;
   }
 }
