@@ -2,7 +2,7 @@
 title: Tea dances at the Queen Elizabeth Hall # My lovely content
 decade: 1980 # 1970
 category: towers # global_news, uk_news, oldham_news, oldham_history, towers, surrounding_estate # Always exactly one category
-year: 1984 # 1975 # if we have it
+year: 1982 # 1975 # if we have it
 source: Catherine # Sheila # If we have it
 link: # https://wikipedia.org/dsdsadsa # If we have it
 image_alt: A scan of an article in the Oldham Evening Chronicle from Wednesday August 25th 1982, with a headline that reads “IT MAY BE THE LAST WALTZ FOR JOHN, 92”. There is an image of John accompanying the article, which shows him posing his arms as if dancing, wearing a suit. The clipping is backed on pink card. # If there is one

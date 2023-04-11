@@ -2,7 +2,7 @@
 subtitle:  'A history of Summervale and Crossbank'
 ---
 
-[cCc] In 2018, First Choice Homes Oldham announced the demolition of Crossbank and Summervale towers, to make way for 90 brand new, low-rise, affordable homes that would better meet the needs of the community in the area. The towers were ultimately demolished in early 2021.
+In 2018, First Choice Homes Oldham announced the demolition of Crossbank and Summervale towers, to make way for 90 brand new, low-rise, affordable homes that would better meet the needs of the community in the area. The towers were ultimately demolished, beginning in late 2021.
 
 Crossbank and Summervale towers had stood since 1975, and First Choice Homes recognised that these towers were more than just bricks and mortar. They contained many hundreds of people’s memories and experiences from the 45 year period they stood, and for many thousands more, these towers served as a visual ‘Gateway to Oldham’, whose absence would be well noted.
 
@@ -35,5 +35,3 @@ To Yusuf and other Coliseum staff — our thoughts are with them at this sad tim
 To MA student Sam Bembow, whose assistance collecting the stories was invaluable, and her tutor, Colleen Morgan, for connecting her with the project.
 
 And of course, to all of our storytellers, especially: Patricia, Sheila, Jean, Paula, Catherine, and Jia.
-
-## Partners
