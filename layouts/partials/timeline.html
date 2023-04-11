@@ -22,8 +22,7 @@
 							<h2 id={{ string $decade }} class="timeline__decade__title">{{ $decade }}</h2>
 						{{ range $i, $val := (where ($quotes.Pages.ByParam "Year") ".Params.Decade" "==" $decade)}}
 							{{ $quote := .}}
-							<div class="timeline__quote content">
-								<p>{{ $quote.Params.year }}</p>
+							<div class="timeline__entry">
 								{{ with .Resources.GetMatch $quote.Params.Image_path }}
                   {{ $originalImagePath := . }}
                   {{ with .Resize $imageWidth }}
@@ -39,7 +38,7 @@
                   {{ end }}
                 {{ end }}
                 {{ if .Content }}
-                  <div>
+                  <div class="timeline__quote">
                     {{ .Content }}
                     {{ with $quote.Params.source}}
                       <p class="timeline__quote-source">{{ . }}</p>
