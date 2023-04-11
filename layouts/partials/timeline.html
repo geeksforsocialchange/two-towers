@@ -40,8 +40,16 @@
                 {{ if .Content }}
                   <div class="timeline__quote">
                     {{ .Content }}
+                    {{ with $quote.Params.source}}
+                      <p class="timeline__quote-source">{{ . }}</p>
+                    {{ end }}
+                    {{ with $quote.Params.category}}
+                      <div class="timeline__type">
+                        {{ replace . "_" " " }}
+                      </div>
+                    {{ end }}
                   </div>
-                {{end}}
+                {{ end }}
 							</div>
 						{{ end }}
 					</div>
