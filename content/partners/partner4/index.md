@@ -1,7 +1,6 @@
 ---
-name: "[cCc]	Geeks For Social Change"	 # name of org to display to user
-link: https://gfsc.studio # If we have it
-slug: gfsc
-image_alt: # If there is one
-image_path: /partners/gfsc.svg # If there is one, should be colocated with the index.md file in the folder
+name: "OL1"
+link: https://www.ol1oldham.com/home
+image_alt: OL1 logo
+image_path: /partners/ol-1.png 
 ---

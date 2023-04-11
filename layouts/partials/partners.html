@@ -5,9 +5,9 @@
 
 <ul class="partners" role="list">
 	{{ range $partners.Pages }}
-	<li class="partners__partner">
+	<li>
 	  <a href="{{ .Params.link }}" title="{{ .Params.name }}">
-	    <img class="partner__logo partner__partner-{{ .Params.slug }}" src="{{ .Params.image_path }}" alt="{{ .Params.image_alt }}" />
+	    <img src="{{ .Params.image_path }}" alt="{{ .Params.image_alt }}" />
 	  </a>
 	</li>
 	{{ end }}
