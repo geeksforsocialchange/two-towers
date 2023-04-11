@@ -24,8 +24,11 @@
   --color-white: #ffffff;
 
   // dimensions
+  --timeline-image-width: 482px;
+  --timeline-image-height: 282px;
   --max-content-width: 986px;
 }
 
 // break points
+$mobile: 600px;
 $footer: 965px;
