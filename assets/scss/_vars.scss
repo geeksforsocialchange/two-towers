@@ -23,7 +23,11 @@
   --color-brown: #533131;
   --color-white: #ffffff;
 
-  // fixed sizes
+  // dimensions
   --timeline-image-width: 482px;
   --timeline-image-height: 282px;
+  --max-content-width: 986px;
 }
+
+// break points
+$mobile: 600px;

@@ -6,30 +6,44 @@
   {{ range $decades }}
     {{ if (where $quotes.Pages ".Params.Decade" "==" .) }}
       {{ $decade := .}}
-			<div class="timeline__line">
-        <a id={{ string $decade }}><h2 class="timeline__decade">{{ $decade }}</h2></a>
-        {{ range $i, $val := (where ($quotes.Pages.ByParam "Year") ".Params.Decade" "==" $decade)}}
-          {{ $quote := .}}
-          <div class="timeline__quote content">
-            <p>{{ $quote.Params.year }}</p>
-            {{ with .Resources.GetMatch $quote.Params.Image_path }}
-              {{ $originalImagePath := . }}
-              {{ with .Resize $imageWidth }}
-                <div class="timeline-image timeline-image__container">
-                  {{ partial "magnifying-glass.svg" }}
-                  <img 
-                    class="timeline-image__image" 
-                    src={{ .RelPermalink }} 
-                    alt={{ $quote.Params.image_alt }} 
-                    title={{ $originalImagePath }}
-                  ></img>
-                </div>
-              {{ end }}
-            {{ end }}
-            <div>{{ .Content }}</div>
-          </div>
-        {{ end }}
-      </div>
+			{{$towerClass := ""}}
+			{{ if eq (int $decade ) 1970}}
+				{{$towerClass = "timeline__tower--top"}}
+			{{ end }}
+			{{ if gt (int $decade ) 1970}}
+				{{$towerClass = "timeline__tower"}}
+			{{ end }}
+			{{ if eq (int $decade ) 2020}}
+				{{$towerClass = "timeline__tower--bottom"}}
+			{{ end }}
+			<div class="{{$towerClass}}">
+				<div class="timeline__line">
+					<div class="timeline__decade">
+							<h2 id={{ string $decade }} class="timeline__decade__title">{{ $decade }}</h2>
+						{{ range $i, $val := (where ($quotes.Pages.ByParam "Year") ".Params.Decade" "==" $decade)}}
+							{{ $quote := .}}
+							<div class="timeline__quote content">
+								<p>{{ $quote.Params.year }}</p>
+								{{ with .Resources.GetMatch $quote.Params.Image_path }}
+                  {{ $originalImagePath := . }}
+                  {{ with .Resize $imageWidth }}
+                    <div class="timeline-image timeline-image__container">
+                      {{ partial "magnifying-glass.svg" }}
+                      <img 
+                        class="timeline-image__image" 
+                        src={{ .RelPermalink }} 
+                        alt={{ $quote.Params.image_alt }} 
+                        title={{ $originalImagePath }}
+                      ></img>
+                    </div>
+                  {{ end }}
+                {{ end }}
+								<div>{{ .Content }}</div>
+							</div>
+						{{ end }}
+					</div>
+				</div>
+			</div>
     {{ end }}
   {{ end }}
   <div class="lightbox"></div>
