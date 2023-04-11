@@ -4,8 +4,8 @@
 
 <div class="timeline ">
   {{ range $decades }}
-    {{ if (where $quotes.Pages ".Params.Decade" "==" .) }}
-      {{ $decade := .}}
+    {{ $decade := (index . 0) }}
+    {{ if (where $quotes.Pages ".Params.Decade" "==" $decade) }}
 			{{$towerClass := ""}}
 			{{ if eq (int $decade ) 1970}}
 				{{$towerClass = "timeline__tower--top"}}

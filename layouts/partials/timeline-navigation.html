@@ -4,11 +4,14 @@
 <nav class="timeline-navigation">
   <ul class="timeline-navigation__list" role="list">
     {{ range $decades }}
-      {{ if (where $quotes.Pages ".Params.Decade" "==" .) }}
-        {{ $decade := .}}
+    {{ $decade := index . 0 }}
+    {{ $asset := index . 1 }}
+      {{ if (where $quotes.Pages ".Params.Decade" "==" $decade) }}
         {{ $href := (printf "%s%s" "#" (string $decade))}}
           <li>
-            <a href={{ $href }}>{{ $decade }}</a>
+            <a class="timeline-navigation__link" href={{ $href }} title={{ $decade }}>
+	      <img class="timeline-navigation__icon" src="/artwork/{{ $asset }}">
+	    </a>
           </li>
       {{ end }}
     {{ end }}
