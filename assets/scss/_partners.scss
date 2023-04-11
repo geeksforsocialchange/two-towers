@@ -1,5 +1,6 @@
 .partners {
   margin: 0;
+  margin-top: var(--s2);
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(clamp(10em, 33%, 273px), 1fr));

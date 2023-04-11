@@ -1,12 +1,17 @@
 {{ define "main" }}
-	<div class="about-background">
-		<div class="about-container">
-			{{ partial "title.html" .}}
-			{{ partial "subtitle.html" .}}
-		  <div class="about__text">
+	<section class="about__header">
+		<div class="about__header__content">
+				{{ partial "title.html" .}}
+				{{ partial "subtitle.html" .}}
+		</div>
+	</section>
+	<div class="about__center">
+		<div class="about__content">
+			<div class="about__text">
 				{{ .Content }}
 			</div>
-			{{ partial "partners.html" . }}
+		{{ partial "partners.html" . }}
 		</div>
 	</div>
+	{{partial "footer.html" .}}
 {{ end }}

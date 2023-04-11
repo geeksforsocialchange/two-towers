@@ -22,18 +22,13 @@ You can also filter the timeline, by tapping the ‘Filter by type of content’
 
 Many thanks to all who have contributed to this project. 
 
-To Danny Isherwood and all the team at FCHO
-
-To Emma Charleston, Dr Kim Foale, and all at GFSC
-
-To Roger Ivens, for his archival support.
-
-To Angie Brain of OL1, for all her practical support and encouragement.
-
-To Yusuf and other Coliseum staff — our thoughts are with them at this sad time for the Coliseum. 
-
-To MA student Sam Bembow, whose assistance collecting the stories was invaluable, and her tutor, Colleen Morgan, for connecting her with the project.
-
+- To Danny Isherwood and all the team at FCHO
+- To Emma Charleston, Dr Kim Foale, and all at GFSC
+- To Roger Ivens, for his archival support.
+- To Angie Brain of OL1, for all her practical support and encouragement.
+- To Yusuf and other Coliseum staff — our thoughts are with them at this sad time for the Coliseum. 
+- To MA student Sam Bembow, whose assistance collecting the stories was invaluable, and her tutor, Colleen Morgan, for connecting her with the project.
+ 
 And of course, to all of our storytellers, especially: Patricia, Sheila, Jean, Paula, Catherine, and Jia.
 
 ## Partners
