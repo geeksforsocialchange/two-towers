@@ -13,6 +13,6 @@ decades:
   - 2010
   - 2020
   - 2030
-imageSize:
+imageSize: #remember this is also defined in css
   height: 282px
   width: 482px

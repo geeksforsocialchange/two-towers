@@ -39,13 +39,12 @@
 .timeline-image {
   cursor: pointer;
   position: relative;
-  margin: var(--s1);
   
   &__magnifying-glass{
-      bottom: var(--s1);
+      bottom: var(--s2);
       height: var(--s3);
       position: absolute;
-      right: var(--s1);
+      right: var(--s3);
       width: var(--s3);
       z-index: 100;
   } 
@@ -58,11 +57,15 @@
       mask-repeat: no-repeat;
       -webkit-mask-repeat: no-repeat;
       mask-position: center;
-      -webkit-position: center;
+      -webkit-mask-position: center;
+      width: 100%;
+      height: 100%;
   }
   //  constrains cloud mask proportions
   &__container{
-      height: $timeline-image-height;
-      width: $timeline-image-width;
+      height: #{'min(var(--timeline-image-height), 58vw)'};
+      width: #{'min(var(--timeline-image-width), 100vw)'};
+      overflow: hidden;
+      padding: var(--s0);
   }
 }

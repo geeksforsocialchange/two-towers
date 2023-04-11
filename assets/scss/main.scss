@@ -1,6 +1,3 @@
-$timeline-image-height: {{ .Site.Data.timeline.imageSize.height | default "100" }};
-$timeline-image-width: {{ .Site.Data.timeline.imageSize.width | default "100" }};
-
 @import "reset";
 @import "vars";
 @import "typography";
