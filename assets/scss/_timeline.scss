@@ -61,6 +61,15 @@
   &__quote-source {
     font-weight: 700;
     line-height: 2;
+
+  &__type {
+    display: inline-block;
+    background-color: var(--type-color);
+    font-weight: bold;
+    color: white;
+    padding: 0.1em 0.3em;
+    text-transform: capitalize;
+    margin-top: var(--s1);
   }
 }
 
