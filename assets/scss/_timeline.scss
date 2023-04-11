@@ -49,7 +49,18 @@
       z-index: 100;
   } 
   &__image{
-      position: inherit;
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      margin: auto;
+
+      width: 100%;
+      height: auto;
+      // height: #{'min(100%, 282px)'};  
+      
+      // cloud shape
       mask-image: url(/cloud-clip.svg);
       -webkit-mask-image: url(/cloud-clip.svg);
       mask-size: contain;
@@ -58,14 +69,12 @@
       -webkit-mask-repeat: no-repeat;
       mask-position: center;
       -webkit-mask-position: center;
-      width: 100%;
-      height: 100%;
   }
   //  constrains cloud mask proportions
   &__container{
-      height: #{'min(var(--timeline-image-height), 58vw)'};
-      width: #{'min(var(--timeline-image-width), 100vw)'};
+      height: #{'min(var(--timeline-image-height), 52.65vw)'};
+      width: #{'min(var(--timeline-image-width), 90vw)'};
       overflow: hidden;
-      padding: var(--s0);
+      margin: var(--s0);
   }
 }
