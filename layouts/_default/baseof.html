@@ -20,7 +20,7 @@
     />
     <title>{{ .Site.Title }}</title>
     {{- $style := resources.Get "scss/main.scss" | resources.ToCSS |
-    resources.Fingerprint "sha256" }}
+      resources.Fingerprint "sha256" }}
     <link rel="stylesheet" href="{{ $style.Permalink }}" />
 		{{partial "socialMeta.html" .}}
   </head>

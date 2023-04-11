@@ -2,7 +2,7 @@
 title: It was a lovely atmosphere # My lovely content
 decade: 1980
 category: # global_news, uk_news, oldham_news, oldham_history, towers, surrounding_estate # Always exactly one category
-year: # 1975 # if we have it
+year: 1980 # 1975 # if we have it
 source: Patricia # Sheila # If we have it
 link: # https://wikipedia.org/dsdsadsa # If we have it
 image_alt: A colour photo of a white TV mast against a cloudy sky. The mast is very tall, with lots of cables tensioned between it and the ground. The mast is in a field, with some trees at the base. # If there is one
