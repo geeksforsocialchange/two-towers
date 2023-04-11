@@ -17,23 +17,19 @@
 
   &__text {
     background-color: var(--color-transparent-white);
-    padding: var(--s2);
+    padding: var(--s3) var(--s2);
   }
 
   &__title {
     max-width: 100%;
     width: clamp(280px, 80vw, 682px);
-    fill: #d3ad31;
-    stroke: #533131;
-    stroke-width: 1.5px;
+    padding: 0 var(--s2) var(--s3) var(--s2);
   }
 
   &__subtitle {
     max-width: 100%;
     width: clamp(280px, 80vw, 900px);
-    fill: #fff;
-    stroke: #533131;
-    stroke-width: 1.5px;
+    padding: 0 var(--s2) var(--s3) var(--s2);
     &--large {
       display: none;
       @media screen and (min-width: $mobile) {
