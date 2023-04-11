@@ -1,22 +1,32 @@
-.about-background {
-  background-image: url("/cover.jpg");
-  background-size: contain;
-  background-position-x: 75%;
+.about {
+  &__header {
+    background-image: url("/about.jpg");
+    background-position-x: 85%;
+    background-position-y: 80%;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--s3);
+  }
+}
+
+.about__center {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
 }
 
-.about-container {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
+.about__content {
   max-width: var(--max-content-width);
   background-color: var(--color-transparent-white);
-  padding: var(--s4) var(--s2) 0 var(--s2) ;
+  padding: var(--s3);
 }
 
 .about__text {
-  padding-bottom: var(--s2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
 }
