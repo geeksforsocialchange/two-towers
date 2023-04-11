@@ -4,19 +4,6 @@
   flex-direction: column;
   justify-content: center;
 
-  &__decade {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: var(--s1);
-    margin: auto;
-    max-width: var(--timeline-max-content-width); // [fFf] should probably be a variable, possibly determined by media query
-    width: 100%;
-    &__title {
-      display: inline-block;
-    }
-  }
-
   &__entries {
     align-items: flex-start;
     display: flex;
@@ -41,33 +28,6 @@
     @media screen and (max-width: $timeline-column) {
       flex-basis: 100%;
     }
-  }
-
-  &__line {
-    background-image: url("/timeline_dash.svg");
-    background-position-x: center;
-    background-repeat: repeat-y;
-  }
-
-  &__quote {
-    width: 100%;
-  }
-
-  &__outlined {
-    background-color: var(--color-transparent-white);
-    border: 1px var(--color-orange) solid;
-    margin: 0;
-    padding: var(--s1);
-    width: 100%;
-    @media screen and (max-width: $timeline-column) {
-      margin: auto;
-      width: calc(100% - (var(--s0) * 2));
-    }
-  }
-
-  &__quote-source {
-    font-weight: 700;
-    line-height: 2;
   }
 
   &__tower {
@@ -106,7 +66,47 @@
       width: 100%;
     }
   }
+
+  &__line {
+    background-image: url("/timeline_dash.svg");
+    background-position-x: center;
+    background-repeat: repeat-y;
+  }
   
+  &__decade {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--s1);
+    margin: auto;
+    max-width: var(--timeline-max-content-width); // [fFf] should probably be a variable, possibly determined by media query
+    width: 100%;
+    &__title {
+      display: inline-block;
+    }
+  }
+
+  &__quote {
+    width: 100%;
+  }
+
+  &__quote-source {
+    font-weight: 700;
+    line-height: 2;
+  }
+
+  &__outlined {
+    background-color: var(--color-transparent-white);
+    border: 1px var(--color-orange) solid;
+    margin: 0;
+    padding: var(--s1);
+    width: 100%;
+    @media screen and (max-width: $timeline-column) {
+      margin: auto;
+      width: calc(100% - (var(--s0) * 2));
+    }
+  }
+
   &__type {
     background-color: var(--type-color);
     color: white;
