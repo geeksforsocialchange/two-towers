@@ -10,19 +10,16 @@
     align-items: center;
     gap: var(--s1) var(--s3);
     flex-wrap: wrap;
-    // display: grid;
-    // align-items: center;
-    // justify-content: center;
-    // grid-template-columns: repeat(
-    //   auto-fit,
-    //   minmax(clamp(11em, 33%, 11rem), 1fr)
-    // );
-    // gap: var(--s1) var(--s3);
+    @media screen and (max-width: $footer) {
+      flex-direction: column;
+    }
   }
   &__about {
-    // text-align: right;
     font-size: 0.9em;
     max-width: 250px;
+    @media screen and (max-width: $footer) {
+      text-align: center;
+    }
   }
   &__logo {
     max-width: 310px;
@@ -30,6 +27,9 @@
   &__partners {
     text-align: right;
     max-width: 250px;
+    @media screen and (max-width: $footer) {
+      text-align: center;
+    }
   }
   &__link {
     color: white;
