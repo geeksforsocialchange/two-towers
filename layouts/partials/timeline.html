@@ -39,6 +39,11 @@
                   {{ end }}
                 {{ end }}
 								<div>{{ .Content }}</div>
+								{{ with $quote.Params.category}}
+									<div class="timeline__type">
+										{{ replace . "_" " " }}
+									</div>
+                {{ end }}
 							</div>
 						{{ end }}
 					</div>
