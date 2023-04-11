@@ -1,12 +1,73 @@
 .timeline {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 
-  &__entry {
-    max-width: var(--s10);
+  &__decade {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--s1);
+    margin: auto;
+    max-width: var(--timeline-max-content-width); // [fFf] should probably be a variable, possibly determined by media query
     width: 100%;
+    &__title {
+      display: inline-block;
+    }
+  }
+
+  &__entries {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    width: 100%;
+    
+    @media screen and (max-width: $timeline-column) {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  &__entry {
+    flex: 1;
+    flex-basis: 50%;
+    margin: var(--s0) 0;
+    max-width: var(--timeline-image-width);
+    width: 100%;
+    @media screen and (max-width: $timeline-column) {
+      flex-basis: 100%;
+    }
+  }
+
+  &__line {
+    background-image: url("/timeline_dash.svg");
+    background-position-x: center;
+    background-repeat: repeat-y;
+  }
+
+  &__quote {
+    width: 100%;
+  }
+
+  &__outlined {
+    background-color: var(--color-transparent-white);
+    border: 1px var(--color-orange) solid;
+    margin: 0;
+    padding: var(--s1);
+    width: 100%;
+    @media screen and (max-width: $timeline-column) {
+      margin: auto;
+      width: calc(100% - (var(--s0) * 2));
+    }
+  }
+
+  &__quote-source {
+    font-weight: 700;
+    line-height: 2;
   }
 
   &__tower {
@@ -18,6 +79,7 @@
     background-repeat: repeat-y;
     background-position-x: center;
     background-size: 60%;
+    width: 100%;
     &--top {
       background-image: linear-gradient(
           var(--color-transparent-white),
@@ -27,6 +89,7 @@
       background-repeat: repeat-y, no-repeat, repeat-y;
       background-position-x: center;
       background-size: 60%;
+      width: 100%;
     }
     &--bottom {
       background-image: linear-gradient(
@@ -37,37 +100,11 @@
       background-repeat: repeat-y, no-repeat, repeat-y;
       background-position: center, center bottom, center;
       background-size: 60%;
+      width: 100%;
     }
-  }
-
-  &__line {
-    background-image: url("/timeline_dash.svg");
-    background-repeat: repeat-y;
-    background-position-x: center;
-  }
-
-  &__decade {
-    width: 100vw;
-    max-width: 1459px; // [fFf] should probably be a variable, possibly determined by media query
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--s1);
-    &__title {
-      display: inline-block;
+    &--none {
+      width: 100%;
     }
-  }
-
-  &__quote {
-    background-color: var(--color-transparent-white);
-    border: 1px var(--color-orange) solid;
-    margin: auto var(--s1);
-    padding: var(--s1);
-  }
-
-  &__quote-source {
-    font-weight: 700;
-    line-height: 2;
   }
   
   &__type {
@@ -129,8 +166,11 @@
   //  constrains cloud mask proportions
   &__container{
       height: #{'min(var(--timeline-image-height), 52.65vw)'};
-      margin: var(--s0) auto;
       overflow: hidden;
-      width: #{'min(var(--timeline-image-width), 90vw)'};
+      width: #{'min(min(var(--timeline-image-width), 90vw), 100%)'};
   }
+
+  &__image-only{
+    margin: 0 var(--s0);
+}
 }
