@@ -1,14 +1,15 @@
 {{ $partners := $.Site.GetPage (path.Join "/partners") }}
 
+<div class="about__text">
+	<h2>This project was produced in partnership with:</h2>
 
-<h2>This project was produced in partnership with:</h2>
-
-<ul class="partners" role="list">
-	{{ range $partners.Pages }}
-	<li>
-	  <a href="{{ .Params.link }}" title="{{ .Params.name }}">
-	    <img src="{{ .Params.image_path }}" alt="{{ .Params.image_alt }}" />
-	  </a>
-	</li>
-	{{ end }}
-</ul>
+	<ul class="partners" role="list">
+		{{ range $partners.Pages }}
+		<li>
+			<a href="{{ .Params.link }}" title="{{ .Params.name }}">
+				<img src="{{ .Params.image_path }}" alt="{{ .Params.image_alt }}" />
+			</a>
+		</li>
+		{{ end }}
+	</ul>
+</div>
