@@ -35,5 +35,3 @@ To Yusuf and other Coliseum staff — our thoughts are with them at this sad tim
 To MA student Sam Bembow, whose assistance collecting the stories was invaluable, and her tutor, Colleen Morgan, for connecting her with the project.
 
 And of course, to all of our storytellers, especially: Patricia, Sheila, Jean, Paula, Catherine, and Jia.
-
-## Partners
