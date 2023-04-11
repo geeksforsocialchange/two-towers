@@ -11,17 +11,24 @@ document.addEventListener("DOMContentLoaded", () => {
   elements.forEach((element) => {
     element.parentElement.addEventListener("click", (event) => {
       event.preventDefault();
+      const title = element.getAttribute("title");
+      const src =
+        element
+          .getAttribute("src")
+          .substring(0, element.getAttribute("src").lastIndexOf("/")) +
+        "/" +
+        element.getAttribute("title");
       lightbox.innerHTML =
         '<a class="lightbox__close"></a><div class="lightbox__image" style="background: url(\'' +
-        element.getAttribute("src") +
+        src +
         '\') center center / contain no-repeat;" title="' +
-        element.getAttribute("title") +
+        title +
         '" ><img class="lightbox__hidden-image" src="' +
-        element.getAttribute("src") +
+        src +
         '" alt="' +
         element.getAttribute("alt") +
         '" /></div><span class="lightbox__title">' +
-        element.getAttribute("title") +
+        title.substring(0, title.lastIndexOf(".")) +
         "</span>";
       lightbox.style.display = "block";
     });
