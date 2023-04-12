@@ -6,7 +6,7 @@
   {{ range $decades }}
     {{ $decade := (index . 0) }}
     {{ if (where $quotes.Pages ".Params.Decade" "==" $decade) }}
-			{{$towerClass := ""}}
+			{{$towerClass := "timeline__tower--none"}}
 			{{ if eq (int $decade ) 1970}}
 				{{$towerClass = "timeline__tower--top"}}
 			{{ end }}
@@ -20,38 +20,42 @@
 				<div class="timeline__line">
 					<div class="timeline__decade">
 							<h2 id={{ string $decade }} class="timeline__decade__title">{{ $decade }}</h2>
-						{{ range $i, $val := (where ($quotes.Pages.ByParam "Year") ".Params.Decade" "==" $decade)}}
-							{{ $quote := .}}
-							<div class="timeline__entry">
-								{{ with .Resources.GetMatch $quote.Params.Image_path }}
-                  {{ $originalImagePath := . }}
-                  {{ with .Resize $imageWidth }}
-                    <div class="timeline-image timeline-image__container">
-                      {{ partial "magnifying-glass.svg" }}
-                      <img 
-                        class="timeline-image__image" 
-                        src={{ .RelPermalink }} 
-                        alt={{ $quote.Params.image_alt }} 
-                        title={{ $originalImagePath }}
-                      ></img>
-                    </div>
-                  {{ end }}
-                {{ end }}
-                {{ if .Content }}
-                  <div class="timeline__quote">
-                    {{ .Content }}
-                    {{ with $quote.Params.source}}
-                      <p class="timeline__quote-source">{{ . }}</p>
+              <div class="timeline__entries">
+                {{ range $i, $val := (where ($quotes.Pages.ByParam "Year") ".Params.Decade" "==" $decade)}}
+                  {{ $quote := .}}
+                  {{ $withoutImage := eq (len (string (.Resources.GetMatch $quote.Params.Image_path))) 0}}
+                  {{ $withQuote := gt (len .Content) 0}}
+                  <div class="timeline__entry {{cond (and (ne $withoutImage true) $withQuote) "timeline__entry--outlined" ""}}">
+                    {{ with .Resources.GetMatch $quote.Params.Image_path }}
+                      {{ $originalImagePath := . }}
+                      {{ with .Resize $imageWidth }}
+                        <div class="timeline-image timeline-image__container {{cond (eq $withQuote false) "timeline-image__image-only" ""}}">
+                          {{ partial "magnifying-glass.svg" }}
+                          <img 
+                            class="timeline-image__image" 
+                            src={{ .RelPermalink }} 
+                            alt={{ $quote.Params.image_alt }} 
+                            title={{ $originalImagePath }}
+                          ></img>
+                        </div>
+                      {{ end }}
                     {{ end }}
-                    {{ with $quote.Params.category}}
-                      <div class="timeline__type">
-                        {{ replace . "_" " " }}
+                    {{ if .Content }}
+                      <div class="timeline__quote {{cond $withoutImage "timeline__quote--outlined" ""}}">
+                        {{ .Content }}
+                        {{ with $quote.Params.source}}
+                          <p class="timeline__quote-source">{{ . }}</p>
+                        {{ end }}
+                        {{ with $quote.Params.category}}
+                          <div class="timeline__type">
+                            {{ replace . "_" " " }}
+                          </div>
+                        {{ end }}
                       </div>
                     {{ end }}
                   </div>
                 {{ end }}
-							</div>
-						{{ end }}
+              </div>
 					</div>
 				</div>
 			</div>

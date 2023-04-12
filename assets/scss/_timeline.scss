@@ -1,12 +1,49 @@
 .timeline {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 
-  &__entry {
-    max-width: var(--s10);
+  &__entries {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
     width: 100%;
+
+    @media screen and (max-width: $timeline-column) {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  &__entry {
+    flex: 1;
+    flex-basis: 50%;
+    margin: var(--s0) 0;
+    max-width: var(--timeline-image-width);
+    width: 100%;
+    @media screen and (max-width: $timeline-column) {
+      flex-basis: 100%;
+      width: calc(100% - (var(--s0) * 2));
+    }
+    &--outlined {
+      background-color: var(--color-transparent-white);
+      border: 1px var(--color-orange) solid;
+      flex: 1;
+      flex-basis: 50%;
+      margin: 0;
+      max-width: var(--timeline-image-width);
+      padding: var(--s1);
+      width: 100%;
+      @media screen and (max-width: $timeline-column) {
+        flex-basis: 100%;
+        margin: auto;
+        width: calc(100% - (var(--s0) * 2));
+      }
+    }
   }
 
   &__tower {
@@ -18,6 +55,7 @@
     background-repeat: repeat-y;
     background-position-x: center;
     background-size: 60%;
+    width: 100%;
     &--top {
       background-image: linear-gradient(
           var(--color-transparent-white),
@@ -27,6 +65,7 @@
       background-repeat: repeat-y, no-repeat, repeat-y;
       background-position-x: center;
       background-size: 60%;
+      width: 100%;
     }
     &--bottom {
       background-image: linear-gradient(
@@ -37,39 +76,53 @@
       background-repeat: repeat-y, no-repeat, repeat-y;
       background-position: center, center bottom, center;
       background-size: 60%;
+      width: 100%;
+    }
+    &--none {
+      width: 100%;
     }
   }
 
   &__line {
     background-image: url("/timeline_dash.svg");
-    background-repeat: repeat-y;
     background-position-x: center;
+    background-repeat: repeat-y;
   }
 
   &__decade {
-    width: 100vw;
-    max-width: 1459px; // [fFf] should probably be a variable, possibly determined by media query
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: var(--s1);
+    margin: auto;
+    max-width: var(
+      --timeline-max-content-width
+    ); // [fFf] should probably be a variable, possibly determined by media query
+    width: 100%;
     &__title {
       display: inline-block;
     }
   }
 
   &__quote {
-    background-color: var(--color-transparent-white);
-    border: 1px var(--color-orange) solid;
-    margin: auto var(--s1);
-    padding: var(--s1);
+    width: 100%;
+    &--outlined {
+      background-color: var(--color-transparent-white);
+      border: 1px var(--color-orange) solid;
+      margin: 0;
+      padding: var(--s1);
+      width: 100%;
+      @media screen and (max-width: $timeline-column) {
+        margin: auto;
+      }
+    }
   }
 
   &__quote-source {
     font-weight: 700;
     line-height: 2;
   }
-  
+
   &__type {
     background-color: var(--type-color);
     color: white;
@@ -96,53 +149,55 @@
   }
 
   &__link {
-      display: inline-block;
+    display: inline-block;
   }
 
   &__icon {
-      width: 50px;
-      height: 50px;
+    width: 50px;
+    height: 50px;
   }
 }
 
 .timeline-image {
   cursor: pointer;
   position: relative;
-  
-  &__magnifying-glass{
-      bottom: var(--s2);
-      height: var(--s3);
-      position: absolute;
-      right: var(--s3);
-      width: var(--s3);
-      z-index: 100;
-  } 
-  &__image{
-      bottom: 0px;
-      left: 0px;
-      margin: auto;
-      position: absolute;
-      right: 0px;
-      top: 0px;
 
-      height: auto;
-      width: 100%;
-      
-      // cloud shape
-      mask-image: url(/cloud-clip.svg);
-      mask-position: center;
-      mask-repeat: no-repeat;
-      mask-size: contain;
-      -webkit-mask-image: url(/cloud-clip.svg);
-      -webkit-mask-position: center;
-      -webkit-mask-size: contain;
-      -webkit-mask-repeat: no-repeat;
+  &__magnifying-glass {
+    bottom: var(--s2);
+    height: var(--s3);
+    position: absolute;
+    right: var(--s3);
+    width: var(--s3);
+    z-index: 100;
+  }
+  &__image {
+    bottom: 0px;
+    left: 0px;
+    margin: auto;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+
+    height: auto;
+    width: 100%;
+
+    // cloud shape
+    mask-image: url(/cloud-clip.svg);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    -webkit-mask-image: url(/cloud-clip.svg);
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
   }
   //  constrains cloud mask proportions
-  &__container{
-      height: #{'min(var(--timeline-image-height), 52.65vw)'};
-      margin: var(--s0) auto;
-      overflow: hidden;
-      width: #{'min(var(--timeline-image-width), 90vw)'};
+  &__container {
+    height: #{"min(var(--timeline-image-height), 52.65vw)"};
+    overflow: hidden;
+    width: #{"min(min(var(--timeline-image-width), 90vw), 100%)"};
+  }
+  &__image-only {
+    margin: 0;
   }
 }
