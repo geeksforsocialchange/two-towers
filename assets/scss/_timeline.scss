@@ -31,7 +31,7 @@
     }
     &--outlined {
       background-color: var(--color-transparent-white);
-      border: 1px var(--color-orange) solid;
+      border: 1px var(--type-color, var(--color-orange)) solid;
       flex: 1;
       flex-basis: 50%;
       margin: 0;
@@ -108,7 +108,7 @@
     width: 100%;
     &--outlined {
       background-color: var(--color-transparent-white);
-      border: 1px var(--color-orange) solid;
+      border: 1px var(--type-color, var(--color-orange)) solid;
       margin: 0;
       padding: var(--s1);
       width: 100%;
