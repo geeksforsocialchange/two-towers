@@ -28,9 +28,11 @@
   // dimensions
   --timeline-image-width: 482px;
   --timeline-image-height: 282px;
+  --timeline-max-content-width: 1086px; //also timeline-column below
   --max-content-width: 986px;
 }
 
 // break points
 $mobile: 600px;
 $footer: 965px;
+$timeline-column: 1086px; //also timeline-max-content-width above
