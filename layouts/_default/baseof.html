@@ -21,6 +21,13 @@
       resources.Fingerprint "sha256" }}
     <link rel="stylesheet" href="{{ $style.Permalink }}" />
 		{{partial "socialMeta.html" .}}
+    {{- if hugo.IsProduction }}
+      <script
+          defer
+          data-domain="towersoldham.uk"
+          src="https://plausible.io/js/plausible.js"
+      ></script>
+    {{- end }}
   </head>
   <body>
     <main>
