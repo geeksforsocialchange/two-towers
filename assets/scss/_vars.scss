@@ -37,3 +37,23 @@ $mobile: 600px;
 $footer: 965px;
 $timeline-column: 1086px; //also timeline-max-content-width above
 $point-nav-overlaps-content: 1265px;
+
+// timeline type colors
+[data-type="global_news"] {
+  --type-color: #3442ac;
+}
+[data-type="oldham_history"] {
+  --type-color: #612c7e;
+}
+[data-type="oldham_news"] {
+  --type-color: #d3ad31;
+}
+[data-type="surrounding_estate"] {
+  --type-color: #c65604;
+}
+[data-type="towers"] {
+  --type-color: #4a722c;
+}
+[data-type="uk_news"] {
+  --type-color: #e54e82;
+}
