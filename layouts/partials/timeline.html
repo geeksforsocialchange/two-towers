@@ -25,7 +25,7 @@
                   {{ $quote := .}}
                   {{ $withoutImage := eq (len (string (.Resources.GetMatch $quote.Params.Image_path))) 0}}
                   {{ $withQuote := gt (len .Content) 0}}
-                  <div class="timeline__entry {{cond (and (ne $withoutImage true) $withQuote) "timeline__outlined" ""}}">
+                  <div class="timeline__entry {{cond (and (ne $withoutImage true) $withQuote) "timeline__entry--outlined" ""}}">
                     {{ with .Resources.GetMatch $quote.Params.Image_path }}
                       {{ $originalImagePath := . }}
                       {{ with .Resize $imageWidth }}
@@ -41,7 +41,7 @@
                       {{ end }}
                     {{ end }}
                     {{ if .Content }}
-                      <div class="timeline__quote {{cond $withoutImage "timeline__outlined" ""}}">
+                      <div class="timeline__quote {{cond $withoutImage "timeline__quote--outlined" ""}}">
                         {{ .Content }}
                         {{ with $quote.Params.source}}
                           <p class="timeline__quote-source">{{ . }}</p>

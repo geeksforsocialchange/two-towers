@@ -27,6 +27,22 @@
     width: 100%;
     @media screen and (max-width: $timeline-column) {
       flex-basis: 100%;
+      width: calc(100% - (var(--s0) * 2));
+    }
+    &--outlined{
+      background-color: var(--color-transparent-white);
+      border: 1px var(--color-orange) solid;
+      flex: 1;
+      flex-basis: 50%;
+      margin: 0;
+      max-width: var(--timeline-image-width);
+      padding: var(--s1);
+      width: 100%;
+      @media screen and (max-width: $timeline-column) {
+        flex-basis: 100%;
+        margin: auto;
+        width: calc(100% - (var(--s0) * 2));
+      }
     }
   }
 
@@ -88,23 +104,21 @@
 
   &__quote {
     width: 100%;
+    &--outlined{
+      background-color: var(--color-transparent-white);
+      border: 1px var(--color-orange) solid;
+      margin: 0;
+      padding: var(--s1);
+      width: 100%;
+      @media screen and (max-width: $timeline-column) {
+        margin: auto;
+    }
+    }
   }
 
   &__quote-source {
     font-weight: 700;
     line-height: 2;
-  }
-
-  &__outlined {
-    background-color: var(--color-transparent-white);
-    border: 1px var(--color-orange) solid;
-    margin: 0;
-    padding: var(--s1);
-    width: 100%;
-    @media screen and (max-width: $timeline-column) {
-      margin: auto;
-      width: calc(100% - (var(--s0) * 2));
-    }
   }
 
   &__type {
@@ -171,6 +185,6 @@
   }
 
   &__image-only{
-    margin: 0 var(--s0);
+    margin: 0;
 }
 }
