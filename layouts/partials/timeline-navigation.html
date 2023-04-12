@@ -10,8 +10,9 @@
         {{ $href := (printf "%s%s" "#" (string $decade))}}
           <li>
             <a class="timeline-navigation__link" href={{ $href }} title={{ $decade }}>
-	      <img class="timeline-navigation__icon" src="/artwork/{{ $asset }}">
-	    </a>
+							<span class="screen-reader-only">{{ $decade }}</span>
+							<img aria-hidden="true" class="timeline-navigation__icon" src="/artwork/{{ $asset }}">
+						</a>
           </li>
       {{ end }}
     {{ end }}
