@@ -19,10 +19,10 @@
   --s10: calc(var(--s9) * var(--ratio));
 
   // colors
-  --color-transparent-white: #FFFFFFE4;
+  --color-transparent-white: #ffffffe4;
   --color-brown: #533131;
-  --color-orange: #C65604;
-  --color-white: #FFFFFF;
+  --color-orange: #c65604;
+  --color-white: #ffffff;
   --type-color: var(--color-brown);
 
   // dimensions
@@ -36,3 +36,4 @@
 $mobile: 600px;
 $footer: 965px;
 $timeline-column: 1086px; //also timeline-max-content-width above
+$point-nav-overlaps-content: 1265px;

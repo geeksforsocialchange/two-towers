@@ -1,18 +1,18 @@
 decades:
-  - 1900
-  - 1910
-  - 1920
-  - 1930
-  - 1940
-  - 1950
-  - 1960
-  - 1970
-  - 1980
-  - 1990
-  - 2000
-  - 2010
-  - 2020
-  - 2030
+  - [ 1900, "Towers_Assets_00s.svg" ]
+  - [ 1910, "Towers_Assets_10s.svg" ]
+  - [ 1920, "Towers_Assets_20s.svg" ]
+  - [ 1930, "Towers_Assets_30s.svg" ]
+  - [ 1940, "Towers_Assets_40s.svg" ]
+  - [ 1950, "Towers_Assets_50s.svg" ]
+  - [ 1960, "Towers_Assets_60s.svg" ]
+  - [ 1970, "Towers_Assets_70s.svg" ]
+  - [ 1980, "Towers_Assets_80s.svg" ]
+  - [ 1990, "Towers_Assets_90s.svg" ]
+  - [ 2000, "Towers_Assets_00s.svg" ]
+  - [ 2010, "Towers_Assets_10s.svg" ]
+  - [ 2020, "Towers_Assets_20s.svg" ]
+  - [ 2030, "Towers_Assets_30s.svg" ]
 imageSize: #remember this is also defined in css
   height: 282px
   width: 482px
