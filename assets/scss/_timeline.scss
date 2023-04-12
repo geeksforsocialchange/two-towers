@@ -99,8 +99,10 @@
       --timeline-max-content-width
     ); // [fFf] should probably be a variable, possibly determined by media query
     width: 100%;
-    &__title {
-      display: inline-block;
+    &__icon {
+      width: var(--timeline-circle);
+      height: var(--timeline-circle);
+      margin: var(--s0);
     }
   }
 
@@ -148,7 +150,13 @@
     display: flex;
     flex-direction: column;
     background-color: #53313136;
-    border-radius: 25px;
+    border-radius: calc(var(--navigation-circle)/2);
+  }
+
+  &__list-child {
+    &:last-child {
+      height: var(--navigation-circle);
+    }
   }
 
   &__link {
@@ -156,8 +164,8 @@
   }
 
   &__icon {
-    width: 50px;
-    height: 50px;
+    width: var(--navigation-circle);
+    height: var(--navigation-circle);
   }
 }
 

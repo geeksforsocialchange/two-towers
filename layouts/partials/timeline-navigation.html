@@ -8,7 +8,7 @@
     {{ $asset := index . 1 }}
       {{ if (where $quotes.Pages ".Params.Decade" "==" $decade) }}
         {{ $href := (printf "%s%s" "#" (string $decade))}}
-          <li>
+          <li class="timeline-navigation__list-child">
             <a class="timeline-navigation__link" href={{ $href }} title={{ $decade }}>
 							<span class="screen-reader-only">{{ $decade }}</span>
 							<img aria-hidden="true" class="timeline-navigation__icon" src="/artwork/{{ $asset }}">
