@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         '" alt="' +
         element.getAttribute("alt") +
         '" /></div><span class="lightbox__title">' +
-        title.substring(0, title.lastIndexOf(".")) +
+         element.getAttribute("data-caption")+
         "</span>";
       lightbox.style.display = "block";
     });

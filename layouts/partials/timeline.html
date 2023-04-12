@@ -36,6 +36,7 @@
                             src={{ .RelPermalink }} 
                             alt={{ $quote.Params.image_alt }} 
                             title={{ $originalImagePath }}
+														data-caption={{$quote.Params.image_caption}}
                           ></img>
                         </div>
                       {{ end }}
