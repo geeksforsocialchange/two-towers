@@ -14,11 +14,15 @@
     align-items: left;
     max-width: var(--max-content-width);
     padding-top: var(--s4);
+    padding-bottom: var(--s4);
   }
 
   &__text {
     background-color: var(--color-transparent-white);
     padding: var(--s3) var(--s2);
+    display: flex;
+    flex-direction: column;
+    gap: var(--s1);
   }
 
   &__title {
