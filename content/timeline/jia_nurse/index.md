@@ -10,4 +10,4 @@ image_caption: # If there is one
 image_path: # If there is one, should be colocated with the index.md file in the folder
 ---
 
-My ex’s grandfather used to live in the building, I remember her telling me once, she was really upset — she said “oh, do you know grandad Tom, Tommy”, I went “yeah”, she said “well the same building that he lives, just above him, a Filipino NHS worker had fallen out the window and died”, so that was one of my memories from the building. Its not a really good memory but I used to remember it, you know when I drive past, I used to remember her words in my head, that someone had actually fallen out the window and died.
+My ex partner's grandfather used to live in the building, I remember her telling me once, she was really upset — she said "oh, do you know Grandad Tom, Tommy", she said "well the same building that he lives, just above him, one of his neighbours, A Filipino lady who worked for the NHS was killed", so that was one of my memories from the building. It's not a really good memory but I used to remember it, you know when I drive past, I used to remember her words in my head, that someone had passed away.

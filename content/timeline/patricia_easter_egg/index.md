@@ -10,4 +10,4 @@ image_caption: # If there is one
 image_path: # If there is one, should be colocated with the index.md file in the folder
 ---
 
-We used to do an Easter egg hunt. […] We wanted to integrate the ethnic community.
+We used to do an Easter egg hunt. We wanted to involve everyone.
