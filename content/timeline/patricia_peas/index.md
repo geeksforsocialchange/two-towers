@@ -10,4 +10,4 @@ image_caption: # If there is one
 image_path: # If there is one, should be colocated with the index.md file in the folder
 ---
 
-The ethnic community wouldn't come to the pub but we were always putting on pie and peas suppers on and things like that. [So we’d] take them to the people. If they had a wedding, they'd always bring [delicious food, like curries]. They’d bring you food, they'd bring you lots of fruit. So obviously when we had something, we went round the estate, giving it out too, you know.
+Some members of the community did not come to the pub, but we were always putting on pie and peas suppers on and things like that. [So we’d] share them with the community. If there was a wedding, there would always be delicious food shared like curries. There would be food and lots of fruit. So obviously when we had a celebration, we would share this around with neighbours, giving this out too.
