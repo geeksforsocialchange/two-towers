@@ -10,4 +10,4 @@ image_caption: # If there is one
 image_path: # If there is one, should be colocated with the index.md file in the folder
 ---
 
-Some members of the community did not come to the pub, but we were always putting on pie and peas suppers on and things like that. [So we’d] share them with the community. If there was a wedding, there would always be delicious food shared like curries. There would be food and lots of fruit. So obviously when we had a celebration, we would share this around with neighbours, giving this out too.
+The Muslim community often don’t drink, so they wouldn’t come to the pub, but we were always putting on pie and peas suppers on and things like that. [So we’d] share them with the community. If there was a wedding, there would always be delicious food shared like curries. There would be food and lots of fruit. So obviously when we had a celebration, we would share this around with neighbours, giving this out too.
