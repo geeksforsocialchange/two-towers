@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Roboto Slab";
+  src: local("Roboto Slab"),
+    url(/fonts/RobotoSlab-VariableFont_wght.ttf) format("truetype");
+}
+
 html {
   color: var(--color-brown);
   font-family: "Roboto Slab", Rockwell, "Rockwell Nova", "DejaVu Serif",
