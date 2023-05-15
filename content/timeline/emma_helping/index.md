@@ -1,7 +1,7 @@
 ---
 title: We felt like we were part of the community # My lovely content
 decade: 2010 # 1970
-category: towers # global_news, uk_news, oldham_news, oldham_history, towers, surrounding_estate # Always exactly one category
+category: towers # global_news, UK_news, oldham_news, oldham_history, towers, surrounding_estate # Always exactly one category
 year: 2012.2 # 1975 # if we have it
 source: Emma # Sheila # If we have it
 link: # https://wikipedia.org/dsdsadsa # If we have it
