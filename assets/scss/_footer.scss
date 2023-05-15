@@ -23,6 +23,9 @@
   }
   &__logo {
     max-width: 310px;
+    &__img {
+      border-radius: 100%;
+    }
   }
   &__partners {
     text-align: right;
