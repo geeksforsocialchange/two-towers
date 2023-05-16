@@ -12,12 +12,11 @@
 		</ul>
 		<h3>Filter by key contributor</h3>
 		<ul role="list">
-			<li><button>Sheila (22 stories)</button></li>
-			<li><button>Sheila (22 stories)</button></li>
-			<li><button>Sheila (22 stories)</button></li>
-			<li><button>Sheila (22 stories)</button></li>
-			<li><button>Sheila (22 stories)</button></li>
-			<li><button>Sheila (22 stories)</button></li>
+			{{ range $.Site.Data.contributors.names }}
+				{{ $name := .}}
+				{{$count := len ( where ($.Site.GetPage (path.Join "/timeline")).Pages "Params.source" $name ) }}
+				<li><button>{{ $name }} ({{$count }} stories)</button></li>
+			{{ end }}
 		</ul>
 		<button>close</button>
 	</div>
