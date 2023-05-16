@@ -1,9 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
-  //hide the lightbox
-  document.querySelectorAll("div.lightbox")[0].addEventListener("click", () => {
+	const close = () => {
     this.innerHTML = "";
     document.querySelectorAll("div.lightbox")[0].style.display = "none";
-  });
+  }
+  //hide the lightbox
+  document.querySelectorAll("div.lightbox")[0].addEventListener("click", close );
+
+	// add keybinding for closing lightbox
+	document.addEventListener("keyup", (event) => {
+		event.preventDefault();
+		if (event.key === "Escape") { 
+			close();
+    }
+	})
 
   //show the lightbox on click
   const elements = document.querySelectorAll("img.timeline-image__image");
