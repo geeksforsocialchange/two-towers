@@ -32,11 +32,11 @@
                   {{ $withQuote := gt (len .Content) 0}}
                   <div 
                   {{ with $quote.Params.category}} 
-                  data-type="{{.}}" 
+                    data-type="{{.}}" 
                   {{ end }}  
                   class="timeline__entry {{cond (and (ne $withoutImage true) $withQuote) "timeline__entry--outlined" ""}}"
-                  {{ if in $quote.Params.source $contributors }}
-                  data-contributor="{{$quote.Params.source}}"
+                  {{ if in  $contributors $quote.Params.source}}
+                    data-contributor="{{$quote.Params.source}}"
                   {{ end }}
                   >
                     {{ with .Resources.GetMatch $quote.Params.Image_path }}
