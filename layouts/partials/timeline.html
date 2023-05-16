@@ -58,7 +58,16 @@
                       <div class="timeline__quote {{cond $withoutImage "timeline__quote--outlined" ""}}">
                         {{ .Content }}
                         {{ with $quote.Params.source}}
-                          <p class="timeline__quote-source">{{ . }}</p>
+                          {{ $source := . }}
+                          {{ if $quote.Params.link }}
+                            <p class="timeline__quote-source">
+                              <a href="{{ $quote.Params.link }}">
+                                {{ $source }}
+                              </a>
+                            </p>
+                          {{ else }}
+                            <p class="timeline__quote-source">{{ $source }}</p>
+                          {{ end }}
                         {{ end }}
                         {{ with $quote.Params.category}}
                           <div class="timeline__type">
