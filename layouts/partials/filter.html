@@ -3,25 +3,25 @@
 	<div class="filter__opts">
 		<h3>Filter by type of content</h3>
 		<ul role="list">
-			<li><button>the towers</button></li>
-			<li><button>surrounding area</button></li>
-			<li><button>oldham history</button></li>
-			<li><button>global news</button></li>
-			<li><button>UK news</button></li>
-			<li><button>UK news</button></li>
+			<li><button onclick="filter('data-type', 'towers')" >the towers</button></li>
+			<li><button onclick="filter('data-type', 'surrounding_estate')" >surrounding estate</button></li>
+			<li><button onclick="filter('data-type', 'oldham_history')" >oldham history</button></li>
+			<li><button onclick="filter('data-type', 'global_news')" >global news</button></li>
+			<li><button onclick="filter('data-type', 'UK_news')" >UK news</button></li>
+			<li><button onclick="filter('data-type', 'oldham_news')" >oldham news</button></li>
 		</ul>
 		<h3>Filter by key contributor</h3>
 		<ul role="list">
 			{{ range $.Site.Data.contributors.names }}
 				{{ $name := .}}
 				{{$count := len ( where ($.Site.GetPage (path.Join "/timeline")).Pages "Params.source" $name ) }}
-				<li><button>{{ $name }} ({{$count }} stories)</button></li>
+				<li><button onclick="filter('data-contributor', '{{$name}}')" >{{ $name }} ({{$count }} stories)</button></li>
 			{{ end }}
 		</ul>
 		<button onclick="closeFilter(event)">close</button>
 	</div>
 	<div class="filter__active">
-		<p>Filtering by: Sheila (22 stories) </p>
+		<p>Filtering stories</p>
 		<button onclick="closeFilter(event)">close</button>
 		<p> Click to return to full timeline</p>
 	</div>
