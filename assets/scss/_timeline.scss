@@ -144,7 +144,7 @@
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 200;
+  z-index: 300;
   @media screen and (max-width: $point-nav-overlaps-content) {
     display: none;
   }
