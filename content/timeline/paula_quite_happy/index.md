@@ -10,4 +10,4 @@ image_caption: # If there is one
 image_path: # If there is one, should be colocated with the index.md file in the folder
 ---
 
-There is a large South Asian Community in the area Including lots of direct neighbours. My Mum gets on great with her neighbours. Some even refer to her as Grandma and Granny. Some provide my mum with food; she really likes it. Her house is just a little bit big for her now because it’s a three-bedroom house, but they bought it, it’s been paid for years. She wants to move then she doesn’t. She said 'no I won’t get good neighbours like this'. She’s quite happy there.
+It's a diverse community, and my Mum gets on great with her neighbours. Some even refer to her as Grandma and Granny. Some provide my mum with food; she really likes it. Her house is just a little bit big for her now because it’s a three-bedroom house, but they bought it, it’s been paid for years. She wants to move then she doesn’t. She said 'no I won’t get good neighbours like this'. She’s quite happy there.

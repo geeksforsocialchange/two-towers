@@ -10,4 +10,4 @@ image_caption: # If there is one
 image_path: # If there is one, should be colocated with the index.md file in the folder
 ---
 
-When did we start having troubles? I think it was 95, 96. It was the younger ones. Sort of, you know, the 17, 18, well, 16, 17 year olds that didn't know how to integrate really, all they wanted to do was cause havoc.
+When did we start having trouble? I think it was 95, 96. It was the younger ones. Sort of, you know, the 17, 18, well, 16, 17 year olds, all they wanted to do was cause havoc.

@@ -10,4 +10,4 @@ image_caption: # If there is one
 image_path: # If there is one, should be colocated with the index.md file in the folder
 ---
 
-Last cotton spun at Elk Mill
+The last cotton was spun at Elk Mill in 1998, which was soon after demolished to make way for the Elk Mill shopping centre. 
