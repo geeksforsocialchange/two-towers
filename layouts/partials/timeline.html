@@ -1,4 +1,5 @@
 {{ $decades := $.Site.Data.timeline.decades }}
+{{ $contributors := $.Site.Data.contributors.names }}
 {{ $imageWidth := printf "%s%s" (strings.TrimSuffix "px" (string $.Site.Data.timeline.imageSize.width)) "x" }}
 {{ $quotes := $.Site.GetPage (path.Join "/timeline") }}
 
@@ -34,7 +35,10 @@
                   data-type="{{.}}" 
                   {{ end }}  
                   class="timeline__entry {{cond (and (ne $withoutImage true) $withQuote) "timeline__entry--outlined" ""}}"
-                  data-contributor="{{$quote.Params.source}}">
+                  {{ if in $quote.Params.source $contributors }}
+                  data-contributor="{{$quote.Params.source}}"
+                  {{ end }}
+                  >
                     {{ with .Resources.GetMatch $quote.Params.Image_path }}
                       {{ $originalImagePath := . }}
                       {{ with .Resize $imageWidth }}
