@@ -1,7 +1,7 @@
 ---
 title: Elk Mill opened # My lovely content
 decade: 1920 # 1970
-category: oldham_news # global_news, uk_news, oldham_news, oldham_history, towers, surrounding_estate # Always exactly one category
+category: oldham_news # global_news, UK_news, oldham_news, oldham_history, towers, surrounding_estate # Always exactly one category
 year: 1927 # 1975 # if we have it
 source: # Sheila # If we have it
 link: # https://wikipedia.org/dsdsadsa # If we have it
