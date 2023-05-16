@@ -48,8 +48,8 @@
 
   &__tower {
     background-image: linear-gradient(
-        var(--color-transparent-white),
-        var(--color-transparent-white)
+        var(--color-tower-white),
+        var(--color-tower-white)
       ),
       url("/tower-middle.png");
     background-repeat: repeat-y;
@@ -58,8 +58,8 @@
     width: 100%;
     &--top {
       background-image: linear-gradient(
-          var(--color-transparent-white),
-          var(--color-transparent-white)
+          var(--color-tower-white),
+          var(--color-tower-white)
         ),
         url("/tower-top.png"), url("/tower-middle.png");
       background-repeat: repeat-y, no-repeat, repeat-y;
@@ -69,8 +69,8 @@
     }
     &--bottom {
       background-image: linear-gradient(
-          var(--color-transparent-white),
-          var(--color-transparent-white)
+          var(--color-tower-white),
+          var(--color-tower-white)
         ),
         url("/tower-bottom.png"), url("/tower-middle.png");
       background-repeat: repeat-y, no-repeat, repeat-y;
@@ -150,7 +150,7 @@
     display: flex;
     flex-direction: column;
     background-color: #53313136;
-    border-radius: calc(var(--navigation-circle)/2);
+    border-radius: calc(var(--navigation-circle) / 2);
   }
 
   &__list-child {
