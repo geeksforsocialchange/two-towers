@@ -29,7 +29,12 @@
                   {{ $quote := .}}
                   {{ $withoutImage := eq (len (string (.Resources.GetMatch $quote.Params.Image_path))) 0}}
                   {{ $withQuote := gt (len .Content) 0}}
-                  <div {{ with $quote.Params.category}} data-type="{{.}}" {{ end }}  class="timeline__entry {{cond (and (ne $withoutImage true) $withQuote) "timeline__entry--outlined" ""}}">
+                  <div 
+                  {{ with $quote.Params.category}} 
+                  data-type="{{.}}" 
+                  {{ end }}  
+                  class="timeline__entry {{cond (and (ne $withoutImage true) $withQuote) "timeline__entry--outlined" ""}}"
+                  data-contributor="{{$quote.Params.source}}">
                     {{ with .Resources.GetMatch $quote.Params.Image_path }}
                       {{ $originalImagePath := . }}
                       {{ with .Resize $imageWidth }}
