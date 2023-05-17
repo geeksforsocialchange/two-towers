@@ -21,21 +21,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: var(--s1) var(--s0);
 }
 
 .filter__types {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--s0);
+  gap: var(--s-1);
   max-width: 30rem;
   justify-content: center;
 }
+
 .filter__contributors {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--s0);
+  gap: var(--s-1);
   max-width: 35rem;
   justify-content: center;
 }
@@ -43,4 +45,37 @@
 .filter__active {
   display: flex;
   align-items: center;
+}
+
+.filter__type-button {
+  border: none;
+  background-color: var(--color-brown);
+  color: var(--color-white);
+  padding: var(--s-5) var(--s0);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.filter__type-button--towers {
+  background-color: var(--color-green);
+}
+
+.filter__type-button--surrounding_estate {
+  background-color: var(--color-orange);
+}
+
+.filter__type-button--oldham_history {
+  background-color: var(--color-purple);
+}
+
+.filter__type-button--global_news {
+  background-color: var(--color-blue);
+}
+
+.filter__type-button--UK_news {
+  background-color: var(--color-pink);
+}
+
+.filter__type-button--oldham_news {
+  background-color: var(--color-yellow);
 }

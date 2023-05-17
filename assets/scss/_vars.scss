@@ -24,6 +24,11 @@
   --color-orange: #c65604;
   --color-white: #ffffff;
   --color-cream: #f4ebcd;
+  --color-green: #4a722c;
+  --color-purple: #612c7e;
+  --color-blue: #3442ac;
+  --color-pink: #e54e82;
+  --color-yellow: #d3ad31;
 
   // dimensions
   --timeline-image-width: 482px;
@@ -43,20 +48,20 @@ $point-nav-overlaps-content: 1265px;
 
 // timeline type colors
 [data-type="global_news"] {
-  --type-color: #3442ac;
+  --type-color: var(--color-blue);
 }
 [data-type="oldham_history"] {
-  --type-color: #612c7e;
+  --type-color: var(--color-purple);
 }
 [data-type="oldham_news"] {
-  --type-color: #d3ad31;
+  --type-color: var(--color-yellow);
 }
 [data-type="surrounding_estate"] {
-  --type-color: #c65604;
+  --type-color: var(--color-orange);
 }
 [data-type="towers"] {
-  --type-color: #4a722c;
+  --type-color: var(--color-green);
 }
 [data-type="UK_news"] {
-  --type-color: #e54e82;
+  --type-color: var(--color-pink);
 }
