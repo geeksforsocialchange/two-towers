@@ -9,7 +9,14 @@
 }
 
 .filter__closed {
+  border: none;
+  background-color: var(--color-cream);
+  color: var(--color-brown);
+  padding: var(--s1) var(--s0);
+  cursor: pointer;
+  font-weight: 500;
 }
+
 .filter__opts {
   display: flex;
   flex-direction: column;
