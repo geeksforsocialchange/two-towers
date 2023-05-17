@@ -137,6 +137,25 @@
     padding: 0.1em 0.3em;
     text-transform: capitalize;
   }
+
+  &__share-link-container {
+    text-align: right;
+  }
+
+  &__share-link {
+    font-weight: bold;
+    color: var(--color-brown);
+    background-image: url("/share_icon.png");
+    background-size: 1em;
+    background-position: right;
+    background-repeat: no-repeat;
+    padding-right: 1.2em;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;  
+    }
+  }
 }
 
 .timeline-navigation {
@@ -218,4 +237,6 @@
   &__image-only {
     margin: 0;
   }
+
+  
 }
