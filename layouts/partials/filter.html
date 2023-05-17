@@ -15,7 +15,7 @@
 			{{ range $.Site.Data.contributors.names }}
 				{{ $name := .}}
 				{{$count := len ( where ($.Site.GetPage (path.Join "/timeline")).Pages "Params.source" $name ) }}
-				<li><button onclick="filter('data-contributor', '{{$name}}')" >{{ $name }} ({{$count }} stories)</button></li>
+				<li><button class="filter__contributor-button" onclick="filter('data-contributor', '{{$name}}')" >{{ $name }}  <span class="filter__story-count">({{$count }} stories)</span></button></li>
 			{{ end }}
 		</ul>
 		<button onclick="closeFilter(event)">close</button>

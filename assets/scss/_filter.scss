@@ -20,6 +20,7 @@
 .filter__opts {
   display: flex;
   flex-direction: column;
+  gap: var(--s1);
   align-items: center;
   padding: var(--s1) var(--s0);
 }
@@ -53,7 +54,8 @@
   color: var(--color-white);
   padding: var(--s-5) var(--s0);
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 600;
+  text-transform: capitalize;
 }
 
 .filter__type-button--towers {
@@ -78,4 +80,17 @@
 
 .filter__type-button--oldham_news {
   background-color: var(--color-yellow);
+}
+
+.filter__contributor-button {
+  border: none;
+  background-color: var(--color-cream);
+  color: var(--color-brown);
+  // padding: var(--s-5) var(--s0);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.filter__story-count {
+  font-weight: 400;
 }
