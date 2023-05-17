@@ -87,6 +87,9 @@
     background-image: url("/timeline_dash.svg");
     background-position-x: center;
     background-repeat: repeat-y;
+    &:first-child {
+      padding-top: var(--s5);
+    }
   }
 
   &__decade {
@@ -141,6 +144,7 @@
   position: fixed;
   right: 0;
   top: 0;
+  z-index: 300;
   @media screen and (max-width: $point-nav-overlaps-content) {
     display: none;
   }
@@ -150,7 +154,7 @@
     display: flex;
     flex-direction: column;
     background-color: #53313136;
-    border-radius: calc(var(--navigation-circle)/2);
+    border-radius: calc(var(--navigation-circle) / 2);
   }
 
   &__list-child {

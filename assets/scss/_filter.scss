@@ -1,0 +1,21 @@
+.filter {
+  background-color: var(--color-cream);
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filter__closed {
+}
+.filter__opts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.filter__active {
+  display: flex;
+  align-items: center;
+}
