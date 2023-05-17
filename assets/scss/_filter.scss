@@ -22,6 +22,24 @@
   flex-direction: column;
   align-items: center;
 }
+
+.filter__types {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s0);
+  max-width: 30rem;
+  justify-content: center;
+}
+.filter__contributors {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s0);
+  max-width: 35rem;
+  justify-content: center;
+}
+
 .filter__active {
   display: flex;
   align-items: center;
