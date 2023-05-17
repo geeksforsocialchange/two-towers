@@ -240,3 +240,11 @@
 
   
 }
+
+.flash_message {
+  position: sticky;
+  bottom: 0;
+  padding: 2em;
+  background-color: #d7a341;
+  text-align: center;
+}

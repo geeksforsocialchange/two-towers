@@ -2,6 +2,7 @@
 {{ $contributors := $.Site.Data.contributors.names }}
 {{ $imageWidth := printf "%s%s" (strings.TrimSuffix "px" (string $.Site.Data.timeline.imageSize.width)) "x" }}
 {{ $quotes := $.Site.GetPage (path.Join "/timeline") }}
+
 <div class="timeline ">
   {{ range $decades }}
     {{ $decade := (index . 0) }}
@@ -78,7 +79,7 @@
                       </div>
                     {{ end }}
                     <p class="timeline__share-link-container">
-                      <a class="timeline__share-link" href="#{{$slug}}">Share</a>
+                      <a  onclick="return shareLink.handleClick(this)" class="timeline__share-link" href="#{{$slug}}">Share</a>
                     </p>  
                   </div>
                 {{ end }}
@@ -90,3 +91,5 @@
   {{ end }}
   <div class="lightbox"></div>
 </div>
+
+<div class="flash_message">This is the flash</div>

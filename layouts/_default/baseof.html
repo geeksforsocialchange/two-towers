@@ -29,5 +29,7 @@
     <script type="text/javascript" src="{{ $lightbox.RelPermalink }}"></script>
     {{ $filter := resources.Get "js/filter.js" | minify | resources.Fingerprint "sha256" }}
     <script type="text/javascript" src="{{ $filter.RelPermalink }}"></script>
+    {{ $sharelink := resources.Get "js/sharelink.js" | minify | resources.Fingerprint "sha256" }}
+    <script type="text/javascript" src="{{ $sharelink.RelPermalink }}"></script>
   </body>
 </html>
