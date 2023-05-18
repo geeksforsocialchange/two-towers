@@ -18,11 +18,17 @@
 				<li><button class="filter__contributor-button" onclick="filter('data-contributor', '{{$name}}')" >{{ $name }}  <span class="filter__story-count">({{$count }} stories)</span></button></li>
 			{{ end }}
 		</ul>
-		<button onclick="closeFilter(event)">close</button>
+		<button class="filter__close filter__close--opts" onclick="closeFilter(event)">
+			<img aria-hidden="true" src="/artwork/close.svg" alt="">
+			<span class="screen-reader-only">close</span>
+		</button>
 	</div>
 	<div class="filter__active">
-		<p>Filtering stories</p>
-		<button onclick="closeFilter(event)">close</button>
-		<p> Click to return to full timeline</p>
+		<p class="filter__active__text filter__active__text--left">Filtering stories</p>
+		<button class="filter__close" onclick="closeFilter(event)">
+			<img aria-hidden="true" src="/artwork/close.svg" alt="">
+			<span class="screen-reader-only">close</span>
+		</button>
+		<p class="filter__active__text"> Click to reset</p>
 	</div>
 </div>

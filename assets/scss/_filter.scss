@@ -22,7 +22,7 @@
   flex-direction: column;
   gap: var(--s1);
   align-items: center;
-  padding: var(--s1) var(--s0);
+  padding: var(--s3) var(--s0);
 }
 
 .filter__types {
@@ -44,8 +44,20 @@
 }
 
 .filter__active {
-  display: flex;
-  align-items: center;
+  padding: var(--s0);
+  display: grid;
+  gap: var(--s-1);
+  grid-template-columns: 1fr auto 1fr;
+  width: 100%;
+}
+
+.filter__active__text {
+  align-self: center;
+  font-weight: 500;
+}
+
+.filter__active__text--left {
+  text-align: right;
 }
 
 .filter__type-button {
@@ -93,4 +105,15 @@
 
 .filter__story-count {
   font-weight: 400;
+}
+
+.filter__close {
+  border: none;
+  background-color: var(--color-transparent);
+}
+
+.filter__close--opts {
+  position: absolute;
+  bottom: -36px;
+  left: calc(50% - 40px);
 }
