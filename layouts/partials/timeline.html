@@ -30,6 +30,7 @@
                   {{ $quote := .}}
                   {{ $withoutImage := eq (len (string (.Resources.GetMatch $quote.Params.Image_path))) 0}}
                   {{ $withQuote := gt (len .Content) 0}}
+                  {{ $slug := $quote.Params.title | urlize }}
                   <div 
                   {{ with $quote.Params.category}} 
                     data-type="{{.}}" 
@@ -38,6 +39,7 @@
                   {{ if in $contributors $quote.Params.source}}
                     data-contributor="{{$quote.Params.source}}"
                   {{ end }}
+                  id="{{$slug}}"
                   >
                     {{ with .Resources.GetMatch $quote.Params.Image_path }}
                       {{ $originalImagePath := . }}
@@ -76,6 +78,9 @@
                         {{ end }}
                       </div>
                     {{ end }}
+                    <p class="timeline__share-link-container">
+                      <a  onclick="return shareLink.handleClick(this)" class="timeline__share-link" href="#{{$slug}}">Share</a>
+                    </p>  
                   </div>
                 {{ end }}
               </div>
@@ -86,3 +91,5 @@
   {{ end }}
   <div class="lightbox"></div>
 </div>
+
+<div class="flash_message">This is the flash</div>
