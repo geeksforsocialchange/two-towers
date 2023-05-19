@@ -9,13 +9,111 @@
 }
 
 .filter__closed {
+  border: none;
+  background-color: var(--color-cream);
+  color: var(--color-brown);
+  padding: var(--s1) var(--s0);
+  cursor: pointer;
+  font-weight: 500;
 }
+
 .filter__opts {
   display: flex;
   flex-direction: column;
+  gap: var(--s1);
   align-items: center;
+  padding: var(--s3) var(--s0);
 }
-.filter__active {
+
+.filter__types {
+  padding: 0;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--s-1);
+  max-width: 30rem;
+  justify-content: center;
+}
+
+.filter__contributors {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-1);
+  max-width: 35rem;
+  justify-content: center;
+}
+
+.filter__active {
+  padding: var(--s0);
+  display: grid;
+  gap: var(--s-1);
+  grid-template-columns: 1fr auto 1fr;
+  width: 100%;
+}
+
+.filter__active__text {
+  align-self: center;
+  font-weight: 500;
+}
+
+.filter__active__text--left {
+  text-align: right;
+}
+
+.filter__type-button {
+  border: none;
+  background-color: var(--color-brown);
+  color: var(--color-white);
+  padding: var(--s-5) var(--s0);
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.filter__type-button--towers {
+  background-color: var(--color-green);
+}
+
+.filter__type-button--surrounding_estate {
+  background-color: var(--color-orange);
+}
+
+.filter__type-button--oldham_history {
+  background-color: var(--color-purple);
+}
+
+.filter__type-button--global_news {
+  background-color: var(--color-blue);
+}
+
+.filter__type-button--UK_news {
+  background-color: var(--color-pink);
+}
+
+.filter__type-button--oldham_news {
+  background-color: var(--color-yellow);
+}
+
+.filter__contributor-button {
+  border: none;
+  background-color: var(--color-cream);
+  color: var(--color-brown);
+  // padding: var(--s-5) var(--s0);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.filter__story-count {
+  font-weight: 400;
+}
+
+.filter__close {
+  border: none;
+  background-color: var(--color-transparent);
+}
+
+.filter__close--opts {
+  position: absolute;
+  bottom: -36px;
+  left: calc(50% - 40px);
 }

@@ -22,7 +22,7 @@ const closeFilter = (event) => {
 const displayActiveState = () => {
   filterClosed.style.display = "none";
   filterOpts.style.display = "none";
-  filterActive.style.display = "flex";
+  filterActive.style.display = "grid";
 };
 
 const hideAll = () => {
