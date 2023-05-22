@@ -96,11 +96,17 @@
 
 .filter__contributor-button {
   border: none;
+  border-bottom: var(--color-transparent) solid 2px;
   background-color: var(--color-cream);
   color: var(--color-brown);
   // padding: var(--s-5) var(--s0);
   cursor: pointer;
   font-weight: 600;
+  transition-duration: 0.3s;
+}
+
+.filter__contributor-button:hover {
+  border-bottom: var(--color-brown) solid 2px;
 }
 
 .filter__story-count {
