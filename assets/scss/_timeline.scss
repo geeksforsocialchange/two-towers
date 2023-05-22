@@ -44,6 +44,11 @@
         width: calc(100% - (var(--s0) * 2));
       }
     }
+    &__meta {
+      display: flex;
+      justify-content: space-between;
+      margin-top: var(--s1);
+    }
   }
 
   &__tower {
@@ -133,7 +138,6 @@
     color: white;
     display: inline-block;
     font-weight: bold;
-    margin-top: var(--s1);
     padding: 0.1em 0.3em;
     text-transform: capitalize;
   }
@@ -153,7 +157,7 @@
     text-decoration: none;
 
     &:hover {
-      text-decoration: underline;  
+      text-decoration: underline;
     }
   }
 }
@@ -237,8 +241,6 @@
   &__image-only {
     margin: 0;
   }
-
-  
 }
 
 .flash_message {
