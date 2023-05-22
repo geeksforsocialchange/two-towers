@@ -19,18 +19,18 @@
   --s10: calc(var(--s9) * var(--ratio));
 
   // colors
-  --color-transparent: #ffffff00;
-  --color-transparent-white: #ffffffe4;
-  --color-tower-white: #ffffffad;
+  --color-blue: #3442ac;
   --color-brown: #533131;
-  --color-orange: #aa4c09;
-  --color-white: #ffffff;
   --color-cream: #f4ebcd;
   --color-green: #4a722c;
-  --color-purple: #612c7e;
-  --color-blue: #3442ac;
+  --color-navy: #18125f;
+  --color-orange: #aa4c09;
   --color-pink: #d13c70;
-  // --color-yellow: #836c22;
+  --color-purple: #612c7e;
+  --color-tower-white: #ffffffad;
+  --color-transparent-white: #ffffffe4;
+  --color-transparent: #ffffff00;
+  --color-white: #ffffff;
   --color-yellow: #d3ad31;
 
   // dimensions
@@ -57,11 +57,9 @@ $point-nav-overlaps-content: 1265px;
   --type-color: var(--color-purple);
 }
 [data-type="oldham_news"] {
-  --type-color: var(--color-yellow);
-  .timeline__type {
-    color: var(--color-brown);
-  }
+  --type-color: var(--color-navy);
 }
+
 [data-type="surrounding_estate"] {
   --type-color: var(--color-orange);
 }
