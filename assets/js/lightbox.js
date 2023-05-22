@@ -34,7 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
         "/" +
         element.getAttribute("title");
       lightbox.innerHTML =
-        '<button class="lightbox__close"></button onclick=() ><div class="lightbox__image" style="background: url(\'' +
+        '<button class="lightbox__close"><span class="screen-reader-only">return to timeline</span><img aria-hidden="true" src="/artwork/close.svg" alt=""></button onclick=() >' +
+        '<div class="lightbox__image" style="background: url(\'' +
         src +
         '\') center center / contain no-repeat;" title="' +
         title +
