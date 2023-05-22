@@ -1,45 +1,50 @@
 document.addEventListener("DOMContentLoaded", () => {
-	const close = () => {
-    this.innerHTML = "";
-    document.querySelectorAll("div.lightbox")[0].style.display = "none";
-  }
-  //hide the lightbox
-  document.querySelectorAll("div.lightbox")[0].addEventListener("click", close );
+    const lightbox = document.querySelectorAll("div.lightbox")[0];
 
-	// add keybinding for closing lightbox
-	document.addEventListener("keyup", (event) => {
-		event.preventDefault();
-		if (event.key === "Escape") { 
-			close();
-    }
-	})
+    const close = () => {
+	this.innerHTML = "";
+	lightbox.style.display = "none";
+    };
+    
+    //hide the lightbox
+    lightbox.addEventListener("click", close);
 
-  //show the lightbox on click
-  const elements = document.querySelectorAll("img.timeline-image__image");
-  const lightbox = document.querySelectorAll("div.lightbox")[0];
-  elements.forEach((element) => {
-    element.parentElement.addEventListener("click", (event) => {
-      event.preventDefault();
-      const title = element.getAttribute("title");
-      const src =
-        element
-          .getAttribute("src")
-          .substring(0, element.getAttribute("src").lastIndexOf("/")) +
-        "/" +
-        element.getAttribute("title");
-      lightbox.innerHTML =
-        '<a class="lightbox__close"></a><div class="lightbox__image" style="background: url(\'' +
-        src +
-        '\') center center / contain no-repeat;" title="' +
-        title +
-        '" ><img class="lightbox__hidden-image" src="' +
-        src +
-        '" alt="' +
-        element.getAttribute("alt") +
-        '" /></div><span class="lightbox__title">' +
-         element.getAttribute("data-caption")+
-        "</span>";
-      lightbox.style.display = "block";
+    // add keybinding for closing lightbox
+    document.addEventListener("keyup", (event) => {
+	event.preventDefault();
+	if (event.key === "Escape") { 
+	    close();
+	}
     });
-  });
+
+    //show the lightbox on click
+    const elements = document.querySelectorAll("img.timeline-image__image");
+    elements.forEach((element) => {
+	element.parentElement.addEventListener("click", (event) => {
+	    event.preventDefault();
+	    
+	    const title = element.getAttribute("title");
+	    const src = element.getAttribute("src");
+	    const alt = element.getAttribute("alt");
+	    const caption = element.getAttribute("data-caption");
+	    
+	    const imgPath = src.substring(0, src.lastIndexOf("/")) + "/" + title;
+
+	    let closeHTML = '<a class="lightbox__close" href="#"></a>';
+	    let captionHTML = `<span class="lightbox__title">${caption}</span>`;
+	    let imgHTML = `<img class="lightbox__hidden-image" src="${imgPath}" alt="${caption}" />`;
+
+	    let html
+	    	= closeHTML
+		+ '<div class="lightbox__container">'
+		+   `<div class="lightbox__image" style="background: url('${imgPath}')" title="${title}" + />`
+		+   imgHTML
+		+ "</div>"
+		+ captionHTML;
+	    
+	    lightbox.innerHTML = html;
+
+	    lightbox.style.display = "flex";
+	});
+    });
 });
