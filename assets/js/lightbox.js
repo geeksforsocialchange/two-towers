@@ -1,18 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
-	const close = () => {
+  const close = () => {
     this.innerHTML = "";
     document.querySelectorAll("div.lightbox")[0].style.display = "none";
-  }
+  };
   //hide the lightbox
-  document.querySelectorAll("div.lightbox")[0].addEventListener("click", close );
+  document.querySelectorAll("div.lightbox")[0].addEventListener("click", close);
 
-	// add keybinding for closing lightbox
-	document.addEventListener("keyup", (event) => {
-		event.preventDefault();
-		if (event.key === "Escape") { 
-			close();
+  // add keybinding for closing lightbox
+  document.addEventListener("keyup", (event) => {
+    event.preventDefault();
+    if (event.key === "Escape") {
+      close();
     }
-	})
+  });
 
   //show the lightbox on click
   const elements = document.querySelectorAll("img.timeline-image__image");
@@ -20,6 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
   elements.forEach((element) => {
     element.parentElement.addEventListener("click", (event) => {
       event.preventDefault();
+      const openButton = element.previousElementSibling;
+      const closeAndFocus = () => {
+        close();
+        openButton.focus();
+      };
+
       const title = element.getAttribute("title");
       const src =
         element
@@ -28,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "/" +
         element.getAttribute("title");
       lightbox.innerHTML =
-        '<a class="lightbox__close"></a><div class="lightbox__image" style="background: url(\'' +
+        '<button class="lightbox__close"></button onclick=() ><div class="lightbox__image" style="background: url(\'' +
         src +
         '\') center center / contain no-repeat;" title="' +
         title +
@@ -37,9 +43,12 @@ document.addEventListener("DOMContentLoaded", () => {
         '" alt="' +
         element.getAttribute("alt") +
         '" /></div><span class="lightbox__title">' +
-         element.getAttribute("data-caption")+
+        element.getAttribute("data-caption") +
         "</span>";
       lightbox.style.display = "block";
+      const closeBtn = lightbox.querySelector(".lightbox__close");
+      closeBtn.onclick = closeAndFocus;
+      closeBtn.focus();
     });
   });
 });
