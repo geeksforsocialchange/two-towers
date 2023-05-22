@@ -11,6 +11,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin: auto;
+    padding: 0;
     width: 100%;
 
     @media screen and (max-width: $timeline-column) {
@@ -153,7 +154,7 @@
     text-decoration: none;
 
     &:hover {
-      text-decoration: underline;  
+      text-decoration: underline;
     }
   }
 }
@@ -237,8 +238,6 @@
   &__image-only {
     margin: 0;
   }
-
-  
 }
 
 .flash_message {

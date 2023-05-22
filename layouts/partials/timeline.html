@@ -25,13 +25,13 @@
                 <span class="screen-reader-only">{{ $decade }}</span>
                 <img aria-hidden="true" class="timeline__decade__icon" src="/artwork/{{ $decadeImage }}">
               </a>
-              <div class="timeline__entries">
+              <ul role="list" class="timeline__entries">
                 {{ range $i, $val := (where ($quotes.Pages.ByParam "Year") ".Params.Decade" "==" $decade)}}
                   {{ $quote := .}}
                   {{ $withoutImage := eq (len (string (.Resources.GetMatch $quote.Params.Image_path))) 0}}
                   {{ $withQuote := gt (len .Content) 0}}
                   {{ $slug := $quote.Params.title | urlize }}
-                  <div 
+                  <li 
                   {{ with $quote.Params.category}} 
                     data-type="{{.}}" 
                   {{ end }}  
@@ -81,9 +81,9 @@
                     <p class="timeline__share-link-container">
                       <a  onclick="return shareLink.handleClick(this)" class="timeline__share-link" href="#{{$slug}}">Share</a>
                     </p>  
-                  </div>
+                  </li>
                 {{ end }}
-              </div>
+              </ul>
 					</div>
 				</div>
 			</div>
