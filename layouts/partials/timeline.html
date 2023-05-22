@@ -45,7 +45,9 @@
                       {{ $originalImagePath := . }}
                       {{ with .Resize $imageWidth }}
                         <div class="timeline-image timeline-image__container {{cond (eq $withQuote false) "timeline-image__image-only" ""}}">
-                          {{ partial "magnifying-glass.svg" }}
+													<button class="timeline-image__magnifying-glass">
+														{{ partial "magnifying-glass.svg" }}
+													</button>
                           <img 
                             class="timeline-image__image" 
                             src={{ .RelPermalink }} 
