@@ -3,7 +3,7 @@
 {{ $imageWidth := printf "%s%s" (strings.TrimSuffix "px" (string $.Site.Data.timeline.imageSize.width)) "x" }}
 {{ $quotes := $.Site.GetPage (path.Join "/timeline") }}
 
-<div class="timeline ">
+<div id="timeline" class="timeline ">
   {{ range $decades }}
     {{ $decade := (index . 0) }}
     {{ $decadeImage := index . 2 }}
