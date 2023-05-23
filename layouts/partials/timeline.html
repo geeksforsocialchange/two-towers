@@ -21,10 +21,10 @@
 			<div class="{{$towerClass}}">
 				<div class="timeline__line">
 					<div class="timeline__decade">
-              <a id={{ $decade }} title={{ $decade }}>
+              <h2 id={{ $decade }}>
                 <span class="screen-reader-only">{{ $decade }}</span>
                 <img aria-hidden="true" class="timeline__decade__icon" src="/artwork/{{ $decadeImage }}">
-              </a>
+              </h2>
               <div class="timeline__entries">
                 {{ range $i, $val := (where ($quotes.Pages.ByParam "Year") ".Params.Decade" "==" $decade)}}
                   {{ $quote := .}}
