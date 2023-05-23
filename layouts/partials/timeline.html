@@ -3,7 +3,7 @@
 {{ $imageWidth := printf "%s%s" (strings.TrimSuffix "px" (string $.Site.Data.timeline.imageSize.width)) "x" }}
 {{ $quotes := $.Site.GetPage (path.Join "/timeline") }}
 
-<div class="timeline ">
+<div id="timeline" class="timeline ">
   {{ range $decades }}
     {{ $decade := (index . 0) }}
     {{ $decadeImage := index . 2 }}
@@ -21,17 +21,17 @@
 			<div class="{{$towerClass}}">
 				<div class="timeline__line">
 					<div class="timeline__decade">
-              <a id={{ $decade }} title={{ $decade }}>
+              <h2 id={{ $decade }}>
                 <span class="screen-reader-only">{{ $decade }}</span>
                 <img aria-hidden="true" class="timeline__decade__icon" src="/artwork/{{ $decadeImage }}">
-              </a>
-              <div class="timeline__entries">
+              </h2>
+              <ul role="list" class="timeline__entries">
                 {{ range $i, $val := (where ($quotes.Pages.ByParam "Year") ".Params.Decade" "==" $decade)}}
                   {{ $quote := .}}
                   {{ $withoutImage := eq (len (string (.Resources.GetMatch $quote.Params.Image_path))) 0}}
                   {{ $withQuote := gt (len .Content) 0}}
                   {{ $slug := $quote.Params.title | urlize }}
-                  <div 
+                  <li 
                   {{ with $quote.Params.category}} 
                     data-type="{{.}}" 
                   {{ end }}  
@@ -45,7 +45,10 @@
                       {{ $originalImagePath := . }}
                       {{ with .Resize $imageWidth }}
                         <div class="timeline-image timeline-image__container {{cond (eq $withQuote false) "timeline-image__image-only" ""}}">
-                          {{ partial "magnifying-glass.svg" }}
+													<button class="timeline-image__magnifying-glass">
+                            <span class="screen-reader-only">enlarge image</span>
+														{{ partial "magnifying-glass.svg" }}
+													</button>
                           <img 
                             class="timeline-image__image" 
                             src={{ .RelPermalink }} 
@@ -90,15 +93,15 @@
 												</p>  
 											{{ end }}
 										{{ end }}
-                  </div>
+                  </li>
                 {{ end }}
-              </div>
+              </ul>
 					</div>
 				</div>
 			</div>
     {{ end }}
   {{ end }}
-  <div class="lightbox"></div>
+  <div role="dialog" aria-modal="true" class="lightbox"></div>
 </div>
 
 <div class="flash_message">This is the flash</div>
