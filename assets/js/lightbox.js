@@ -30,21 +30,23 @@ document.addEventListener("DOMContentLoaded", () => {
 	    
 	    const imgPath = src.substring(0, src.lastIndexOf("/")) + "/" + title;
 
-	    let closeHTML = '<a class="lightbox__close" href="#"></a>';
+	    let closeHTML = '<a class="lightbox__close"></a>';
 	    let captionHTML = `<span class="lightbox__title">${caption}</span>`;
 	    let imgHTML = `<img class="lightbox__hidden-image" src="${imgPath}" alt="${caption}" />`;
-
+	    let imageDiv = `<div class="lightbox__image" style="background: url('${imgPath}')" title="${title}">`;
+	    
 	    let html
-	    	= closeHTML
-		+ '<div class="lightbox__container">'
-		+   `<div class="lightbox__image" style="background: url('${imgPath}')" title="${title}" + />`
-		+   imgHTML
-		+ "</div>"
-		+ captionHTML;
+		= '<div class="lightbox__container">'
+		+   imageDiv
+	    	+     closeHTML
+		+     imgHTML
+		+   "</div>"
+		+   captionHTML
+		+ "</div>";
 	    
 	    lightbox.innerHTML = html;
 
-	    lightbox.style.display = "flex";
+	    lightbox.style.display = "block";
 	});
     });
 });
