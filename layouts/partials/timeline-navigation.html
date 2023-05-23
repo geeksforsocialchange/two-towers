@@ -2,6 +2,10 @@
 {{ $quotes := $.Site.GetPage (path.Join "/timeline") }}
 
 <nav class="timeline-navigation">
+	<button class="timeline-navigation__btn" onclick="console.log('btnbtnbtnbtnbtn')">
+			<img aria-hidden="true" src="/artwork/plus.svg" alt="">
+			<span class="screen-reader-only">open or close nav</span>
+		</button>
   <ul class="timeline-navigation__list" role="list">
     {{ range $decades }}
     {{ $decade := index . 0 }}
