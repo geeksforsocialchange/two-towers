@@ -1,73 +1,54 @@
 .lightbox {
-    background: rgba(0,0,0,0.85); 
-    display: none;
-    height: 100%; 
-    left: 0; 
-    line-height: 0; 
-    padding: var(--s3);
-    position: fixed; 
-    top: 0; 
-    width: 100%; 
-    z-index: 9999999; 
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  height: 100%;
+  left: 0;
+  line-height: 0;
+  padding: var(--s3);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999999;
 
-    &__image{
-        left: 50%;
-        max-width: 100%;
-        max-height: 100%; 
-        position: relative;
-        top: 50%;
-        transform: translate(-50%,-50%);
-    }
+  &__image {
+    left: 50%;
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-    &__hidden-image{
-        opacity: 0; 
-        pointer-events: none; 
-        width: auto;
-    }
+  &__hidden-image {
+    opacity: 0;
+    pointer-events: none;
+    width: auto;
+  }
 
-    &__title{
-        color: white; 
-        display: block; 
-        left: 0; 
-        position: fixed;
-        right:0;
-        text-align: center; 
-        text-shadow:
-            -1px -1px 0 #000,
-            1px -1px 0 #000,
-            -1px 1px 0 #000,
-            1px 1px 0 #000;
-        top: var(--s0);
-        user-select: none; 
-        width: 100%; 
-        
-    }
+  &__title {
+    color: white;
+    display: block;
+    left: 0;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
+    top: var(--s0);
+    user-select: none;
+    width: 100%;
+  }
 
-    &__close{
-        cursor: pointer; 
-        height: 50px; 
-        position: fixed; 
-        right: 0; 
-        text-decoration: none; 
-        top: 0;
-        width: 50px; 
-        z-index: 99; 
-
-        &::after, &::before{
-            background: white; 
-            content: ""; 
-            height: 3px; 
-            position: absolute; 
-            margin-left: 14px;
-            margin-top: 22px;
-            transform-origin: 50% 50%;
-            width: 23px;
-        }
-        &::before{
-            transform: rotate(-45deg);
-        }
-        &::after{
-            transform: rotate(45deg);
-        }
-    }
+  &__close {
+    cursor: pointer;
+    background-color: var(--color-transparent);
+    border: none;
+    height: 50px;
+    position: fixed;
+    right: 0;
+    text-decoration: none;
+    top: 0;
+    width: 50px;
+    z-index: 99;
+  }
 }

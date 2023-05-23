@@ -45,7 +45,10 @@
                       {{ $originalImagePath := . }}
                       {{ with .Resize $imageWidth }}
                         <div class="timeline-image timeline-image__container {{cond (eq $withQuote false) "timeline-image__image-only" ""}}">
-                          {{ partial "magnifying-glass.svg" }}
+													<button class="timeline-image__magnifying-glass">
+                            <span class="screen-reader-only">enlarge image</span>
+														{{ partial "magnifying-glass.svg" }}
+													</button>
                           <img 
                             class="timeline-image__image" 
                             src={{ .RelPermalink }} 
@@ -89,7 +92,7 @@
 			</div>
     {{ end }}
   {{ end }}
-  <div class="lightbox"></div>
+  <div role="dialog" aria-modal="true" class="lightbox"></div>
 </div>
 
 <div class="flash_message">This is the flash</div>

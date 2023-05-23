@@ -198,6 +198,8 @@
   position: relative;
 
   &__magnifying-glass {
+    background-color: var(--color-transparent);
+    border: none;
     bottom: var(--s2);
     height: var(--s3);
     position: absolute;
