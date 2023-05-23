@@ -2,6 +2,7 @@ const filterClosed = document.querySelector(".filter__closed");
 const filterOpts = document.querySelector(".filter__opts");
 const filterActive = document.querySelector(".filter__active");
 const timelineItems = document.querySelectorAll(".timeline__entry");
+const header = document.querySelectorAll(".header")[0];
 
 filterOpts.style.display = "none";
 filterActive.style.display = "none";
@@ -13,6 +14,9 @@ const openFilter = (event) => {
 };
 const closeFilter = (event) => {
   event.preventDefault();
+  if (filterOpts.style.display === "none") {
+    window.scrollTo(0, header.offsetHeight);
+  }
   filterClosed.style.display = "block";
   filterOpts.style.display = "none";
   filterActive.style.display = "none";
@@ -43,4 +47,5 @@ const filter = (attribute, val) => {
     if (el.getAttribute(attribute) === val) el.style.display = "block";
   });
   displayActiveState();
+  window.scrollTo(0, header.offsetHeight);
 };
