@@ -1,1 +1,40 @@
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="73" xmlns="http://www.w3.org/2000/svg" height="73" id="screenshot-e473512e-89a7-80af-8002-86e71dd4e0bf" viewBox="0 0 73 73" style="-webkit-print-color-adjust: exact;" fill="none" version="1.1"><g id="shape-e473512e-89a7-80af-8002-86e71dd4e0bf" rx="0" ry="0" style="fill: rgb(0, 0, 0);"><g id="shape-e473512e-89a7-80af-8002-86e71dd58505"><g class="fills" id="fills-e473512e-89a7-80af-8002-86e71dd58505"><ellipse class="st0" rx="36.5" ry="36.5" cx="36.5" cy="36.5" transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)"/></g></g><g id="shape-e473512e-89a7-80af-8002-86e71dd762ff"><g class="fills" id="fills-e473512e-89a7-80af-8002-86e71dd762ff"><path class="st1" rx="0" ry="0" d="M57.006,36.500L15.994,36.500"/></g></g></g></svg>
+<svg
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="50"
+  xmlns="http://www.w3.org/2000/svg"
+  height="50"
+  id="screenshot-e473512e-89a7-80af-8002-86e71dd4e0bf"
+  viewBox="0 0 73 73"
+  style="-webkit-print-color-adjust: exact"
+  fill="none"
+  version="1.1"
+>
+<style type="text/css">
+	.st0{fill:#D3AD31;}
+	.st1{fill:none;stroke:#533131;stroke-width:6;}
+</style>
+  <g
+    id="shape-e473512e-89a7-80af-8002-86e71dd4e0bf"
+    rx="0"
+    ry="0"
+    style="fill: rgb(0, 0, 0)"
+  >
+    <g id="shape-e473512e-89a7-80af-8002-86e71dd58505">
+      <g class="fills" id="fills-e473512e-89a7-80af-8002-86e71dd58505">
+        <ellipse
+          class="st0"
+          rx="36.5"
+          ry="36.5"
+          cx="36.5"
+          cy="36.5"
+          transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)"
+        />
+      </g>
+    </g>
+    <g id="shape-e473512e-89a7-80af-8002-86e71dd762ff">
+      <g class="fills" id="fills-e473512e-89a7-80af-8002-86e71dd762ff">
+        <path class="st1" rx="0" ry="0" d="M57.006,36.500L15.994,36.500" />
+      </g>
+    </g>
+  </g>
+</svg>
