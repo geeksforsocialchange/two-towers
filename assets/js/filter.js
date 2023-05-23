@@ -43,6 +43,7 @@ const showActiveFilter = (attribute, selectedFilter) => {
 
 const hideActiveFilter = () => {
   activeFilter.className = "filter__active__text--inner";
+  activeFilter.textContent = "";
 };
 
 const hideAll = () => {
