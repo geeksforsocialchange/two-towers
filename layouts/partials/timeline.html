@@ -74,16 +74,25 @@
                             <p class="timeline__quote-source">{{ $source }}</p>
                           {{ end }}
                         {{ end }}
-                        {{ with $quote.Params.category}}
-                          <div class="timeline__type">
-                            {{ replace . "_" " " }}
-                          </div>
-                        {{ end }}
+													<div class="timeline__entry__meta">
+													{{ with $quote.Params.category}}
+														<div class="timeline__type">
+															{{ replace . "_" " " }}
+														</div>
+														<p class="timeline__share-link-container">
+															<a  onclick="return shareLink.handleClick(this)" class="timeline__share-link" href="#{{$slug}}">Share</a>
+														</p>  
+													{{ end }}
+												</div>
                       </div>
                     {{ end }}
-                    <p class="timeline__share-link-container">
-                      <a  onclick="return shareLink.handleClick(this)" class="timeline__share-link" href="#{{$slug}}">Share</a>
-                    </p>  
+										{{ if $quote.Params.Image_path}}
+											{{ if (not .Content)}}
+												<p class="timeline__share-link-container">
+													<a  onclick="return shareLink.handleClick(this)" class="timeline__share-link" href="#{{$slug}}">Share</a>
+												</p>  
+											{{ end }}
+										{{ end }}
                   </li>
                 {{ end }}
               </ul>
