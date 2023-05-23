@@ -59,6 +59,19 @@
   text-align: right;
 }
 
+.filter__active__text--type {
+  color: var(--color-white);
+  font-weight: 600;
+  margin-left: 0.5rem;
+  padding: var(--s-5) var(--s0);
+  text-transform: capitalize;
+}
+
+.filter__active__text--contributor {
+  color: var(--color-brown);
+  font-weight: 600;
+}
+
 .filter__type-button {
   border: none;
   background-color: var(--color-brown);

@@ -2,6 +2,9 @@ const filterClosed = document.querySelector(".filter__closed");
 const filterOpts = document.querySelector(".filter__opts");
 const filterActive = document.querySelector(".filter__active");
 const timelineItems = document.querySelectorAll(".timeline__entry");
+const activeFilter = document.querySelectorAll(
+  ".filter__active__text--inner"
+)[0];
 
 filterOpts.style.display = "none";
 filterActive.style.display = "none";
@@ -13,6 +16,7 @@ const openFilter = (event) => {
 };
 const closeFilter = (event) => {
   event.preventDefault();
+  hideActiveFilter();
   filterClosed.style.display = "block";
   filterOpts.style.display = "none";
   filterActive.style.display = "none";
@@ -23,6 +27,22 @@ const displayActiveState = () => {
   filterClosed.style.display = "none";
   filterOpts.style.display = "none";
   filterActive.style.display = "grid";
+};
+
+const showActiveFilter = (attribute, selectedFilter) => {
+  activeFilter.textContent = selectedFilter.replace("_", " ");
+  if (attribute === "data-type") {
+    activeFilter.classList.add(
+      `filter__active__text--type`,
+      `filter__type-button--${selectedFilter}`
+    );
+  } else {
+    activeFilter.classList.add(`filter__active__text--contributor`);
+  }
+};
+
+const hideActiveFilter = () => {
+  activeFilter.className = "filter__active__text--inner";
 };
 
 const hideAll = () => {
@@ -42,5 +62,6 @@ const filter = (attribute, val) => {
   timelineItems.forEach((el) => {
     if (el.getAttribute(attribute) === val) el.style.display = "block";
   });
+  showActiveFilter(attribute, val);
   displayActiveState();
 };
