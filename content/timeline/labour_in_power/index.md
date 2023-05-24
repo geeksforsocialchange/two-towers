@@ -5,9 +5,9 @@ category: UK_news # global_news, UK_news, oldham_news, oldham_history, towers, s
 year: 1997 # 1975 # if we have it
 source: # Sheila # If we have it
 link: # https://wikipedia.org/dsdsadsa # If we have it
-image_alt: #[cCc]
+image_alt: #
 image_caption: # If there is one
-image_path: #[cCc]
+image_path: #
 ---
 
 Labour gain power
