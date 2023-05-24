@@ -2,12 +2,10 @@ const filterClosed = document.querySelector(".filter__closed");
 const filterOpts = document.querySelector(".filter__opts");
 const filterActive = document.querySelector(".filter__active");
 const timelineItems = document.querySelectorAll(".timeline__entry");
-const activeFilter = document.querySelectorAll(
-  ".filter__active__text--inner"
-)[0];
-const activeFilterCount = document.querySelectorAll(
+const activeFilter = document.querySelector(".filter__active__text--inner");
+const activeFilterCount = document.querySelector(
   ".filter__active__text--story-count"
-)[0];
+);
 
 filterOpts.style.display = "none";
 filterActive.style.display = "none";
