@@ -65,9 +65,17 @@ const showAll = () => {
 
 const filter = (attribute, val, count) => {
   hideAll();
+  let firstGroupisFound = false;
   timelineItems.forEach((el) => {
-    if (el.getAttribute(attribute) === val) el.style.display = "block";
+    if (el.getAttribute(attribute) === val) {
+      el.style.display = "block";
+      if (!firstGroupisFound) {
+        firstGroupisFound = true;
+        showActiveFilter(attribute, val, count);
+        displayActiveState();
+        const y = el.getBoundingClientRect().top + window.pageYOffset - 192;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }
   });
-  showActiveFilter(attribute, val, count);
-  displayActiveState();
 };

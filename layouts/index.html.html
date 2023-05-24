@@ -1,8 +1,8 @@
 {{ define "main" }}
 	<a class="screen-reader-only screen-reader-only--focus" href="#timeline">Skip to timeline</a>
   {{partial "header.html" .}}
-  {{ partial "timeline-navigation.html" . }}
   {{ partial "filter.html" . }}
+  {{ partial "timeline-navigation.html" . }}
   {{ partial "timeline.html" . }}
 	{{partial "footer.html" .}}
 {{ end }}
