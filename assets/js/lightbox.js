@@ -1,11 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
   const close = () => {
+    const image = document.getElementById("lightbox__image");
+    const title = document.getElementById("lightbox__title");
+
+    image.src = "";
+    image.alt = "";
+    title.textContent = "";
+
     document.body.style.overflow = "unset";
-    this.innerHTML = "";
-    document.querySelectorAll("div.lightbox")[0].style.display = "none";
+    document.querySelector("div.lightbox").style.display = "none";
   };
   //hide the lightbox
-  document.querySelectorAll("div.lightbox")[0].addEventListener("click", close);
+  document.querySelector("div.lightbox").addEventListener("click", close);
 
   // add keybinding for closing lightbox
   document.addEventListener("keyup", (event) => {
@@ -17,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //show the lightbox on click
   const elements = document.querySelectorAll("img.timeline-image__image");
-  const lightbox = document.querySelectorAll("div.lightbox")[0];
+  const lightbox = document.querySelector("div.lightbox");
   const image = document.getElementById("lightbox__image");
   const title = document.getElementById("lightbox__title");
 
