@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const close = () => {
+    document.body.style.overflow = "unset";
     this.innerHTML = "";
     document.querySelectorAll("div.lightbox")[0].style.display = "none";
   };
@@ -17,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //show the lightbox on click
   const elements = document.querySelectorAll("img.timeline-image__image");
   const lightbox = document.querySelectorAll("div.lightbox")[0];
+
   elements.forEach((element) => {
     element.parentElement.addEventListener("click", (event) => {
       event.preventDefault();
@@ -26,6 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
         openButton.focus();
       };
 
+      document.body.style.overflow = "hidden";
+
       const title = element.getAttribute("title");
       const src =
         element
@@ -34,18 +38,14 @@ document.addEventListener("DOMContentLoaded", () => {
         "/" +
         element.getAttribute("title");
       lightbox.innerHTML =
-        '<button class="lightbox__close"><span class="screen-reader-only">return to timeline</span><img aria-hidden="true" src="/artwork/close.svg" alt=""></button onclick=() >' +
-        '<div class="lightbox__image" style="background: url(\'' +
-        src +
-        '\') center center / contain no-repeat;" title="' +
-        title +
-        '" ><img class="lightbox__hidden-image" src="' +
+        '<div class="lightbox__container"><button class="lightbox__close"><span class="screen-reader-only">return to timeline</span><img aria-hidden="true" src="/artwork/close.svg" alt=""></button onclick=() >' +
+        '<div class="lightbox__image-container"><img class="lightbox__image" src="' +
         src +
         '" alt="' +
         element.getAttribute("alt") +
         '" /></div><span class="lightbox__title">' +
         element.getAttribute("data-caption") +
-        "</span>";
+        "</span></div>";
       lightbox.style.display = "block";
       const closeBtn = lightbox.querySelector(".lightbox__close");
       closeBtn.onclick = closeAndFocus;
