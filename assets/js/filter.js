@@ -45,10 +45,10 @@ const filter = (attribute, val) => {
       el.style.display = "block";
       if (!firstGroupisFound) {
         firstGroupisFound = true;
+        displayActiveState();
         const y = el.getBoundingClientRect().top + window.pageYOffset - 192;
         window.scrollTo({ top: y, behavior: "smooth" });
       }
     }
   });
-  window.setTimeout(displayActiveState, 1000);
 };
