@@ -101,7 +101,18 @@
 			</div>
     {{ end }}
   {{ end }}
-  <div role="dialog" aria-modal="true" class="lightbox"></div>
+  <div role="dialog" aria-modal="true" class="lightbox">
+    <div class="lightbox__container">
+      <button class="lightbox__close">
+        <span class="screen-reader-only">return to timeline</span>
+        <img aria-hidden="true" src="/artwork/close.svg" alt="">
+      </button>
+      <div class="lightbox__image-container">
+        <img class="lightbox__image" id="lightbox__image" src=""/>
+      </div>
+      <span class="lightbox__title" id="lightbox__title"></span>
+    </div>
+  </div>
 </div>
 
 <div role="alert" class="flash_message">This is the flash</div>
