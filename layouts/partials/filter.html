@@ -15,7 +15,7 @@
 			{{ range $.Site.Data.contributors.names }}
 				{{ $name := .}}
 				{{$count := len ( where ($.Site.GetPage (path.Join "/timeline")).Pages "Params.source" $name ) }}
-				<li><button class="filter__contributor-button" onclick="filter('data-contributor', '{{$name}}')" >{{ $name }}  <span class="filter__story-count">({{$count }} stories)</span></button></li>
+				<li><button class="filter__contributor-button" onclick="filter('data-contributor', '{{$name}}', '{{$count}}')" >{{ $name }}  <span class="filter__story-count">({{$count }} stories)</span></button></li>
 			{{ end }}
 		</ul>
 		<button class="filter__close filter__close--opts" onclick="closeFilter(event)">
@@ -25,14 +25,17 @@
 	</div>
 	<div class="filter__active">
 		<p class="filter__active__text filter__active__text--left">
-			Filtering stories by 
+			Filtering by: 
 			<span class="filter__active__text filter__active__text--inner">
 			</span>
+			<span class="filter__active__text--story-count"></span>
 		</p>
-		<button class="filter__close" onclick="closeFilter(event)">
-			<img aria-hidden="true" src="/artwork/close.svg" alt="">
-			<span class="screen-reader-only">close</span>
-		</button>
-		<p class="filter__active__text"> Click to reset</p>
+		<div class="filter__close-container">
+			<button class="filter__close" onclick="closeFilter(event)">
+				<img aria-hidden="true" src="/artwork/close.svg" alt="">
+				<span class="screen-reader-only">close</span>
+			</button>
+			<p class="filter__active__text" onclick="closeFilter(event)"> Click to return to full timeline</p>
+		</div>
 	</div>
 </div>
