@@ -3,7 +3,7 @@
 {{ $imageWidth := printf "%s%s" (strings.TrimSuffix "px" (string $.Site.Data.timeline.imageSize.width)) "x" }}
 {{ $quotes := $.Site.GetPage (path.Join "/timeline") }}
 
-<div class="timeline ">
+<div id="timeline" class="timeline ">
   {{ range $decades }}
     {{ $decade := (index . 0) }}
     {{ $decadeImage := index . 2 }}
@@ -45,7 +45,10 @@
                       {{ $originalImagePath := . }}
                       {{ with .Resize $imageWidth }}
                         <div class="timeline-image timeline-image__container {{cond (eq $withQuote false) "timeline-image__image-only" ""}}">
-                          {{ partial "magnifying-glass.svg" }}
+													<button class="timeline-image__magnifying-glass">
+                            <span class="screen-reader-only">enlarge image</span>
+														{{ partial "magnifying-glass.svg" }}
+													</button>
                           <img 
                             class="timeline-image__image" 
                             src={{ .RelPermalink }} 
@@ -71,16 +74,25 @@
                             <p class="timeline__quote-source">{{ $source }}</p>
                           {{ end }}
                         {{ end }}
-                        {{ with $quote.Params.category}}
-                          <div class="timeline__type">
-                            {{ replace . "_" " " }}
-                          </div>
-                        {{ end }}
+													<div class="timeline__entry__meta">
+													{{ with $quote.Params.category}}
+														<div class="timeline__type">
+															{{ replace . "_" " " }}
+														</div>
+														<p class="timeline__share-link-container">
+															<a  onclick="return shareLink.handleClick(this)" class="timeline__share-link" href="#{{$slug}}">Share</a>
+														</p>  
+													{{ end }}
+												</div>
                       </div>
                     {{ end }}
-                    <p class="timeline__share-link-container">
-                      <a  onclick="return shareLink.handleClick(this)" class="timeline__share-link" href="#{{$slug}}">Share</a>
-                    </p>  
+										{{ if $quote.Params.Image_path}}
+											{{ if (not .Content)}}
+												<p class="timeline__share-link-container">
+													<a  onclick="return shareLink.handleClick(this)" class="timeline__share-link" href="#{{$slug}}">Share</a>
+												</p>  
+											{{ end }}
+										{{ end }}
                   </li>
                 {{ end }}
               </ul>
@@ -89,7 +101,18 @@
 			</div>
     {{ end }}
   {{ end }}
-  <div class="lightbox"></div>
+  <div role="dialog" aria-modal="true" class="lightbox">
+    <div class="lightbox__container">
+      <button class="lightbox__close">
+        <span class="screen-reader-only">return to timeline</span>
+        <img aria-hidden="true" src="/artwork/close.svg" alt="">
+      </button>
+      <div class="lightbox__image-container">
+        <img class="lightbox__image" id="lightbox__image" src=""/>
+      </div>
+      <span class="lightbox__title" id="lightbox__title"></span>
+    </div>
+  </div>
 </div>
 
-<div class="flash_message">This is the flash</div>
+<div role="alert" class="flash_message">This is the flash</div>
