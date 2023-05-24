@@ -50,5 +50,5 @@ const filter = (attribute, val) => {
       }
     }
   });
-  window.setTimeout(displayActiveState, 2000);
+  window.setTimeout(displayActiveState, 1000);
 };
