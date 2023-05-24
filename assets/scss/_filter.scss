@@ -3,7 +3,6 @@
   background-color: var(--color-cream);
   display: flex;
   flex-direction: column;
-  position: sticky;
   top: 0;
   z-index: 200;
 }
@@ -115,6 +114,7 @@
 .filter__close {
   border: none;
   background-color: var(--color-transparent);
+  cursor: pointer
 }
 
 .filter__close--opts {

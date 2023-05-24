@@ -2,7 +2,6 @@ const filterClosed = document.querySelector(".filter__closed");
 const filterOpts = document.querySelector(".filter__opts");
 const filterActive = document.querySelector(".filter__active");
 const timelineItems = document.querySelectorAll(".timeline__entry");
-const header = document.querySelectorAll(".header")[0];
 
 filterOpts.style.display = "none";
 filterActive.style.display = "none";
@@ -14,9 +13,6 @@ const openFilter = (event) => {
 };
 const closeFilter = (event) => {
   event.preventDefault();
-  if (filterOpts.style.display === "none") {
-    window.scrollTo(0, header.offsetHeight);
-  }
   filterClosed.style.display = "block";
   filterOpts.style.display = "none";
   filterActive.style.display = "none";
@@ -43,9 +39,16 @@ const showAll = () => {
 
 const filter = (attribute, val) => {
   hideAll();
+  let firstGroupisFound = false;
   timelineItems.forEach((el) => {
-    if (el.getAttribute(attribute) === val) el.style.display = "block";
+    if (el.getAttribute(attribute) === val) {
+      el.style.display = "block";
+      if (!firstGroupisFound) {
+        firstGroupisFound = true;
+        const y = el.getBoundingClientRect().top + window.pageYOffset - 192;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }
   });
-  displayActiveState();
-  window.scrollTo(0, header.offsetHeight);
+  window.setTimeout(displayActiveState, 2000);
 };
