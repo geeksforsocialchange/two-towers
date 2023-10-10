@@ -6,7 +6,7 @@ year: 2000 # 1975 # if we have it
 source: # Sheila # If we have it
 link: # https://wikipedia.org/dsdsadsa # If we have it
 image_alt: An image of cotton processing machinery on display in a museum. The machinery has lots of skeins of cotton arranged in rows, and many moving parts. # If there is one
-image_caption: Machinery from Elk Mill on display at Manchester Science and Industry Museum. Image courtesy of the Board of Trustees of the Science Museum. Licence - CC BY-NC-NC-SA 4.0 # If there is one
+image_caption: Machinery from Elk Mill on display at Manchester Science and Industry Museum. Image courtesy of the Board of Trustees of the Science Museum. Licence - CC BY-NC-SA 4.0 # If there is one
 image_path: ElkMill.jpg # If there is one, should be colocated with the index.md file in the folder
 ---
 

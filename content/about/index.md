@@ -28,8 +28,11 @@ Many thanks to all who have contributed to this project.
 - To Angie Brain of OL1, for all her practical support and encouragement.
 - To Yusuf and other Coliseum staff — our thoughts are with them at this sad time for the Coliseum. 
 - To University of York Cultural Heritage Management MA student Sam Benbow, whose assistance collecting the stories was invaluable, and her tutor, Colleen Morgan, for connecting her with the project.
+- To Jan Hicks, for her invaluable assistance in compiling the correct attributions and image licensing.
  
 And of course, to all of our storytellers, especially: Patricia, Sheila, Jean, Paula, Catherine, and Jia.
+
+Homepage and about page main images: Photograph by Leonard Kaye, courtesy of Oldham Local Studies and Archives. The image is © Oldham Council and may not be reproduced without permission.
 
 ## Notification and Takedown statement 
 
