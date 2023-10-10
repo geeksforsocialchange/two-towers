@@ -6,7 +6,7 @@ year: 2022.3 # 1975 # if we have it
 source: # Sheila # If we have it
 link: # https://wikipedia.org/dsdsadsa # If we have it
 image_alt: An aerial colour photo of the towers, with multiple machines working on demolishing them. The tower to the left of the image has been partially demolished, with only its left side still standing.  # If there is one
-image_caption: The towers during demolition. Photo by Danny Isherwood # If there is one
+image_caption: The towers during demolition. Photograph by First Choice Homes Oldham. Licence - CC BY-NC-ND 4.0 # If there is one
 image_path: towers_demolished.jpg # If there is one, should be colocated with the index.md file in the folder
 ---
 

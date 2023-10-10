@@ -31,4 +31,33 @@ Many thanks to all who have contributed to this project.
  
 And of course, to all of our storytellers, especially: Patricia, Sheila, Jean, Paula, Catherine, and Jia.
 
+## Notification and Takedown statement 
+
+All original written content for this site is licensed under Creative Commons ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)). This includes all of the quotes from our storytellers. 
+
+The design and code for this site is licensed under the open source [MIT licence](https://opensource.org/license/mit/).
+
+We have endeavoured to secure Creative Commons rights for as many images as possible, but due to the nature of sourcing archival imagery, this has not been possible for all images used on this site. Please see each individual image for usage rights and attribution.
+
+Due to the historic nature of some images on this site, it has been challenging to ascertain the original copyright holder. We have done our utmost to establish this across all imagery used on this site, but if you are the rights holder and believe we are using your work without permission (or is not covered by a limitation or exception in national law), please contact us at info@gfsc.studio, so that we can remove it or attribute it correctly. 
+
+Please state the following: 
+
+- Your contact details
+- Full details of the material and when you found it
+- Proof that you are the rights holder and a statement that, under penalty of
+perjury, you are the rights holder or are an authorised representative
+- Your contact details and address
+
+Upon receipt of notification, the Notice and Takedown Procedure is then invoked as follows:
+
+1. The project will acknowledge receipt of your complaint by email and will make an initial assessment of the validity of the complaint.
+2. Upon receipt of a valid complaint the material will be temporarily removed from the project website pending an agreed solution.
+3. The project will contact the contributor who provided the material, if relevant. The contributor will be notified that the material is subject to a complaint, under what allegations, and will be encouraged to assuage the complaints concerned.
+4. We will endeavour to resolve the issue swiftly and amicably and to the satisfaction of both parties, with the following possible outcomes:
+    - The material is replaced on the website unchanged.
+    - The material is replaced on the website with changes.
+    - The material is permanently removed from the website.
+5. If we are unable to agree a solution, the material will remain unavailable until a time when a resolution has been reached.
+
 ## Partners

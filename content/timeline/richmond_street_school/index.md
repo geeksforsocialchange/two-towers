@@ -6,7 +6,7 @@ year: 1953 # 1975 # if we have it
 source: Sheila # Sheila # If we have it
 link: # https://wikipedia.org/dsdsadsa # If we have it
 image_alt: A black and white aerial photo of streets of houses, with a school at the centre of the frame. # If there is one
-image_caption: Richmond Street School # If there is one
+image_caption: Richmond Street School. Image supplied by Angie for ‘The Towers - A history of Crossbank and Summervale’. We have made reasonable efforts to trace the copyright holder. If you believe that we have infringed your copyright by using this image, please see our Notification and Takedown statement. # If there is one
 image_path: richmond_street_school.jpeg # If there is one, should be colocated with the index.md file in the folder
 ---
 
