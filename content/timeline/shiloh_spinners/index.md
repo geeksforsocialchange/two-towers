@@ -6,7 +6,7 @@ year: 1933 # 1975 # if we have it
 source: # Sheila # If we have it
 link: # https://wikipedia.org/dsdsadsa # If we have it
 image_alt: A photo of a white card on brown paper. At the top left of the card ‘1933’ is written in blue crayon. On the card is an illustration of an elk, surrounded by ‘Elk Mill’ in decorative red lettering. The card reads ‘December, nineteen hundred and thirty-three. Once again Christmas comes. It reminds me of old friends and also the coming of a new year with all its possibilities. May our future relationships be as pleasant as the past… We have valued your business and desire you to accept our thanks… Our aim, as it always has been, is to be consistent in quality and service… With all good wishes, We are yours faithfully, ELK MILL. Royton, Lancashire’ # If there is one
-image_caption: Shiloh Spinners (owners of Elk Mill) prided themselves on having good relations with their employees. Often, employees would receive holiday cards and were congratulated on their work ethic and commitment. # If there is one
+image_caption: Shiloh Spinners (owners of Elk Mill) prided themselves on having good relations with their employees. Often, employees would receive holiday cards and were congratulated on their work ethic and commitment. Image supplied by Oldham Local Studies and Archives. Public domain. # If there is one
 image_path: card.png # If there is one, should be colocated with the index.md file in the folder
 ---
 
